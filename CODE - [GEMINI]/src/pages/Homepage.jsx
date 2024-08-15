@@ -7,7 +7,7 @@ function Homepage() {
 	return (
 		<Box
 			position="relative"
-			bgImage="url('src/assets/Ocean.png')"
+			bgImage="url('src/assets/Ocean.png')" // this is just a placeholder background image
 			bgSize="cover"
 			bgPosition="center"
 			minHeight="100vh"

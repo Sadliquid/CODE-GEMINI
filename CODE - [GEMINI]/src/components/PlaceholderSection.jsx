@@ -1,3 +1,5 @@
+// This section is the top right of the homepage, which is a placeholder for now, until we find a good use for it
+
 import { Card, Text } from "@chakra-ui/react"
 
 function PlaceholderSection() {

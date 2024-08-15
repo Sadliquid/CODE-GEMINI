@@ -5,6 +5,7 @@ import ImageCard from "./ImageCard";
 function ImagesSection() {
     const [scrollPosition, setScrollPosition] = useState(0);
 
+    // placeholder images
     const images = [
         "src/assets/Ocean.png",
         "src/assets/Night.png",
