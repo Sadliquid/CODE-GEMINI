@@ -6,13 +6,10 @@ function ImageCard({ src }) {
         <Card
             bg="white"
             p={0}
-            borderRadius="md"
+            borderRadius="md 0 0 md"
             boxShadow="md"
-            mx="auto"
-            maxW="250px"
-            maxH="250px"
-            w={"250px"}
-            h={"250px"}
+            w="full"
+            h="full"
             overflow="hidden"
         >
             <Image 
