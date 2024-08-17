@@ -23,6 +23,7 @@ const NoteCard = ({ name, text }) => {
                 boxShadow="lg"
                 w="200px"
                 h="250px"
+                mb={3}
                 position="relative"
                 transition="0.2s ease-in-out"
                 transform={`rotate(${randomDegree})`}
@@ -113,6 +114,7 @@ const NoteCard = ({ name, text }) => {
                                     fontFamily="'Patrick Hand', sans-serif"
                                     fontSize="md"
                                     color="gray.800"
+                                    whiteSpace="pre-line"
                                     mt={3}
                                 >
                                     {text}

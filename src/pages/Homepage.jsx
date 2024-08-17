@@ -1,4 +1,3 @@
-// This is the homepage, which has the full-sized background image 
 import { Box } from '@chakra-ui/react';
 import MainCard from '../components/MainCard';
 
@@ -7,13 +6,13 @@ function Homepage() {
 	return (
 		<Box
             position="relative"
-            bgImage="url('src/assets/Ocean.png')" // this is just a placeholder background image
+            bgImage="url('src/assets/Ocean.png')" 
             bgSize="cover"
             bgPosition="center"
-            bgAttachment="fixed" // Keeps the background image static
+            bgAttachment="fixed" 
             minHeight="100vh"
-            width="100%" // Ensure the width covers the viewport
-            overflow="hidden" // Prevents overflow issues
+            width="100%" 
+            overflow="hidden" 
         >
 			<Box
 				position="absolute"

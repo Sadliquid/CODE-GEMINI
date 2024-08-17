@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-// This is the main card. The images section, notes section and something else whcih can be placed at top right will be here.
+
 import { Card, Box, Text, useMediaQuery } from "@chakra-ui/react";
 import NotesSection from "./NotesSection";
 import ImagesSection from "./ImagesSection";
@@ -11,25 +11,6 @@ function MainCard() {
 
     return (
         <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
-            {/* <Card height="98%" width={isSmallerThan770px ? "98%" : "80%"} borderRadius="2xl" padding={5} backgroundColor={"white.900"} border={"2px solid #a8a9ad"}>
-                <Box display="flex" flexDirection="column" height="100%" width="100%">
-
-                    <Box display="flex" height="50%" width="100%" marginBottom={3}>
-                        <Box width="70%" height="100%" marginRight={3}>
-                            <ImagesSection width="100%" height="100%" />
-                        </Box>
-                        <Box width="30%" height="100%">
-                            <MiniPlayer width="100%" height="100%" />
-                        </Box>
-                    </Box>
-
-                    <Box height="50%" width="100%">
-                        <NotesSection width="100%" height="100%" />
-                    </Box>
-
-                </Box>
-            </Card> */}
-
             <Card
                 height="98%"
                 width={isSmallerThan770px ? "98%" : "80%"}
