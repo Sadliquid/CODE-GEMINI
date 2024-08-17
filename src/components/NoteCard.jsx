@@ -1,21 +1,45 @@
-// This is the card component for every note.
-import { Text, Card } from "@chakra-ui/react";
+/* eslint-disable react/prop-types */
 
-function NoteCard() {
+import { Box, Text } from '@chakra-ui/react';
+
+const NoteCard = ({ text }) => {
     return (
-        <Card
-            bg="white"
+        <Box
+            bg="yellow.100"
             p={4}
             borderRadius="md"
-            boxShadow="md"
-            maxW="sm"
-            mx="auto"
-            mt={4}
+            boxShadow="lg"
+            transform="rotate(-3deg)"
+            w="200px"
+            h="250px"
+            position="relative"
+            _before={{
+                content: `""`,
+                position: 'absolute',
+                top: '-10px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: '20px',
+                height: '20px',
+                bg: 'cyan',
+                borderRadius: '50%',
+                boxShadow: 'md',
+            }}
         >
-            <Text fontSize="xl">Note Title</Text>
-            <Text fontSize="md">Note Description</Text>
-        </Card>
-    )
-}
+            <Text
+                fontFamily="'Patrick Hand', sans-serif"
+                fontSize="md"
+                color="gray.800"
+                overflow="hidden"
+                textOverflow="ellipsis"
+                whiteSpace="normal" // Allows for multi-line truncation
+                wordBreak="break-word"
+                noOfLines={9}
+            >
+                {text}
+            </Text>
+        </Box>
+    );
+};
 
-export default NoteCard
+export default NoteCard;

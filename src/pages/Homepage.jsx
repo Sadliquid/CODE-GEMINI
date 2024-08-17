@@ -6,12 +6,15 @@ function Homepage() {
 
 	return (
 		<Box
-			position="relative"
-			bgImage="url('src/assets/Ocean.png')" // this is just a placeholder background image
-			bgSize="cover"
-			bgPosition="center"
-			minHeight="100vh"
-		>
+            position="relative"
+            bgImage="url('src/assets/Ocean.png')" // this is just a placeholder background image
+            bgSize="cover"
+            bgPosition="center"
+            bgAttachment="fixed" // Keeps the background image static
+            minHeight="100vh"
+            width="100%" // Ensure the width covers the viewport
+            overflow="hidden" // Prevents overflow issues
+        >
 			<Box
 				position="absolute"
 				top={0}
