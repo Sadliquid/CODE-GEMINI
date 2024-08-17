@@ -2,17 +2,24 @@
 
 import { Box, Text } from '@chakra-ui/react';
 
-const NoteCard = ({ text }) => {
+const NoteCard = ({ name, text }) => {
+    const randomDegree = String(Math.floor(Math.random() * 4) + 1) + "deg";
+
     return (
         <Box
             bg="yellow.100"
             p={4}
             borderRadius="md"
             boxShadow="lg"
-            transform="rotate(-3deg)"
             w="200px"
             h="250px"
             position="relative"
+            transition="0.2s ease-in-out"
+            transform={`rotate(${randomDegree})`}
+            _hover={{
+                transform: `scale(1.04)`,
+                transition: "0.2s ease-in-out",
+            }}
             _before={{
                 content: `""`,
                 position: 'absolute',
@@ -25,6 +32,9 @@ const NoteCard = ({ text }) => {
                 borderRadius: '50%',
                 boxShadow: 'md',
             }}
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-between"
         >
             <Text
                 fontFamily="'Patrick Hand', sans-serif"
@@ -32,11 +42,18 @@ const NoteCard = ({ text }) => {
                 color="gray.800"
                 overflow="hidden"
                 textOverflow="ellipsis"
-                whiteSpace="normal" // Allows for multi-line truncation
+                whiteSpace="normal"
                 wordBreak="break-word"
-                noOfLines={9}
+                noOfLines={7}
             >
                 {text}
+            </Text>
+            <Text
+                alignSelf="flex-start"
+                fontStyle={"italic"}
+                mt="auto"
+            >
+                ~{" " + name}
             </Text>
         </Box>
     );
