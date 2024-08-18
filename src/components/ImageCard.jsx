@@ -1,5 +1,5 @@
-import { Card } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
+/* eslint-disable react/prop-types */
+import { Card, Image } from "@chakra-ui/react";
 
 function ImageCard({ src }) {
     return (
