@@ -8,7 +8,6 @@ function ImagesSection() {
     const [autoScroll, setAutoScroll] = useState(true);
     const toast = useToast();
 
-    // placeholder images
     const images = [
         "src/assets/Ocean.png",
         "src/assets/Night.png",
@@ -30,7 +29,7 @@ function ImagesSection() {
         if (autoScroll !== false) {
             setAutoScroll(false);
             toast({
-                title: "Auto-scroll paused",
+                title: "Auto-scroll paused!",
                 position: "bottom-right",
                 description: "Click on the images to re-enable auto-scroll.",
                 status: "success",

@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+
 import { Card, Image } from "@chakra-ui/react";
 
 function ImageCard({ src }) {
@@ -14,7 +15,7 @@ function ImageCard({ src }) {
         >
             <Image 
                 src={src}
-                alt="Placeholder"
+                alt="Image"
                 objectFit="cover"
                 width="100%"     
                 height="100%"
