@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, Box, Button } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import ImageCard from "./ImageCard";
@@ -22,6 +22,16 @@ function ImagesSection() {
         setScrollPosition(prev => Math.min(prev + 1, images.length - 1));
     };
 
+    // Auto-scroll every 3 seconds
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setScrollPosition(prev => (prev + 1) % images.length);
+        }, 5000);
+
+        // Clean up interval when the component unmounts
+        return () => clearInterval(intervalId);
+    }, [images.length]);
+
     return (
         <Card display="flex" justifyContent="center" alignItems="center" width="100%" height="100%" overflow="hidden" position="relative" borderRadius={"2xl"} border={"2px solid white"}>
             <Box 
@@ -40,7 +50,7 @@ function ImagesSection() {
                         display="flex"
                         flexDirection="row"
                         transform={`translateX(-${scrollPosition * 100}%)`}
-                        transition="transform 0.3s ease"
+                        transition="transform 1s ease-out"
                         width={`${images.length * 100}%`}
                         height="100%"
                     >
