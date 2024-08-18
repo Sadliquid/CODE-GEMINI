@@ -99,12 +99,25 @@ const NoteCard = ({ name, text }) => {
                                 height="50%"
                                 maxHeight="400px"
                                 transition="0.2s ease-in-out"
+                                overflowY="scroll"
+                                overflowX="hidden" 
                                 sx={{
                                     '&::-webkit-scrollbar': {
-                                        display: 'none',
+                                        width: '8px',
                                     },
-                                    scrollbarWidth: 'none',
-                                    overflow: "scroll"
+                                    '&::-webkit-scrollbar-track': {
+                                        background: '#f1f1f1',
+                                        borderRadius: '0px 24px 24px 0px',
+                                    },
+                                    '&::-webkit-scrollbar-thumb': {
+                                        background: '#888',
+                                        borderRadius: '24px',
+                                    },
+                                    '&::-webkit-scrollbar-thumb:hover': {
+                                        background: '#555',
+                                    },
+                                    scrollbarWidth: 'thin',
+                                    scrollbarColor: '#888 #f1f1f1',
                                 }}
                             >
                                 <Box display="flex" justifyContent={"right"} cursor={"pointer"}>
