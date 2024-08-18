@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Card, Box, Button } from "@chakra-ui/react";
+import { Card, Box, Button, useToast } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import ImageCard from "./ImageCard";
 
 function ImagesSection() {
     const [scrollPosition, setScrollPosition] = useState(0);
+    const [autoScroll, setAutoScroll] = useState(true);
+    const toast = useToast();
 
     // placeholder images
     const images = [
@@ -16,24 +18,62 @@ function ImagesSection() {
 
     const handleScrollLeft = () => {
         setScrollPosition(prev => Math.max(prev - 1, 0));
+        pauseAutoScroll();
     };
 
     const handleScrollRight = () => {
         setScrollPosition(prev => Math.min(prev + 1, images.length - 1));
+        pauseAutoScroll();
     };
 
-    // Auto-scroll every 3 seconds
+    const pauseAutoScroll = () => {
+        if (autoScroll !== false) {
+            setAutoScroll(false);
+            toast({
+                title: "Auto-scroll paused",
+                position: "bottom-right",
+                description: "Click on the images to re-enable auto-scroll.",
+                status: "success",
+                duration: 3000,
+                isClosable: true,
+            });
+        }
+    };
+
+    const enableAutoScroll = () => {
+        if (autoScroll !== true) {
+            setAutoScroll(true);
+            toast({
+                title: "Auto-scroll re-enabled",
+                position: "bottom-right",
+                status: "success",
+                duration: 3000,
+                isClosable: true,
+            });
+        }
+    };
+
     useEffect(() => {
+        if (!autoScroll) return;
         const intervalId = setInterval(() => {
             setScrollPosition(prev => (prev + 1) % images.length);
         }, 5000);
 
-        // Clean up interval when the component unmounts
         return () => clearInterval(intervalId);
-    }, [images.length]);
+    }, [autoScroll, images.length]);
 
     return (
-        <Card display="flex" justifyContent="center" alignItems="center" width="100%" height="100%" overflow="hidden" position="relative" borderRadius={"2xl"} border={"2px solid white"}>
+        <Card
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            width="100%"
+            height="100%"
+            overflow="hidden"
+            position="relative"
+            borderRadius="2xl"
+            border="2px solid white"
+        >
             <Box 
                 display="flex"
                 alignItems="center"
@@ -50,9 +90,11 @@ function ImagesSection() {
                         display="flex"
                         flexDirection="row"
                         transform={`translateX(-${scrollPosition * 100}%)`}
-                        transition="transform 1s ease-out"
+                        transition="transform 1s ease-in-out"
+                        cursor={autoScroll ? "default" : "pointer"}
                         width={`${images.length * 100}%`}
                         height="100%"
+                        onClick={enableAutoScroll}
                     >
                         {images.map((src, index) => (
                             <Box
