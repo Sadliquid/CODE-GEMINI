@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/exhaustive-deps */
+
 import { useState, useRef, useEffect } from "react";
 import { Card, Box, Text, Slider, SliderTrack, SliderFilledTrack, SliderThumb, Image, HStack } from "@chakra-ui/react";
 import { FaPlay, FaPause, FaStepBackward, FaStepForward } from "react-icons/fa";
@@ -53,7 +54,7 @@ function MiniPlayer() {
 
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
-    const audioRef = useRef(new Audio(songs[0].audioSrc)); // Set initial song here
+    const audioRef = useRef(new Audio(songs[0].audioSrc));
     const [progress, setProgress] = useState(0);
 
     useEffect(() => {
@@ -78,9 +79,9 @@ function MiniPlayer() {
 
     useEffect(() => {
         audioRef.current.src = songs[currentSongIndex].audioSrc;
-        audioRef.current.load(); // Reload the new audio source
+        audioRef.current.load();
         if (isPlaying) {
-            audioRef.current.play(); // Play the new song immediately if playing
+            audioRef.current.play();
         }
     }, [currentSongIndex]);
 
