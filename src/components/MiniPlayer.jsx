@@ -20,7 +20,7 @@ function MiniPlayer() {
             songName: "Magical Connection",
             songArtist: "Peak Twilight and Prithvi",
             audioSrc: "src/assets/audio/MagicalConnection.mp3",
-            audioCover: "src/assets/audioCovers/PeakTwilight.png"
+            audioCover: "src/assets/CozyWood.png"
         },
         {
             songName: "Common Ground",

@@ -24,17 +24,30 @@ function CollapsedPlayer({ image, songName, isPlaying, handlePreviousSong, toggl
                             height="100%"
                             width="100%"
                         >
-                            <Image
-                                src={image}
-                                borderRadius="md"
-                                width="38px"
-                                height="38px"
-                                objectFit="cover"
-                                ml={2}
-                                sx={{ userSelect: "none" }}
-                            />
+                            <motion.div
+                                key={image}
+                                initial={{ scale: 0 }}
+                                animate={{ rotate: 180, scale: 1 }}
+                                transition={{
+                                    type: "spring",
+                                    stiffness: 260,
+                                    damping: 20
+                                }}
+                                style={{ marginLeft: "5px" }}
+                            >
+                                <Image
+                                    src={image}
+                                    borderRadius="md"
+                                    width="38px"
+                                    height="38px"
+                                    objectFit="cover"
+                                    ml={2}
+                                    sx={{ userSelect: "none" }}
+                                />
+                            </motion.div>
                             {!isSmallerThan230px && (
                                 <motion.div
+                                    key={songName}
                                     initial={{ opacity: 0, y: 5 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6 }}
