@@ -28,14 +28,12 @@ function MainCard() {
                 <Box display="flex" flexDirection="column" height="100%" width="100%">
 
                     <Box display="flex" height="50%" width="100%" marginBottom={3}>
-                        <Box width={isSmallerThan695px ? "100%" : "70%"} height="100%" marginRight={3}>
+                        <Box width="auto" height="100%">
                             <ImagesSection width="100%" height="100%" />
                         </Box>
-                        {!isSmallerThan695px && (
-                            <Box width="30%" height="100%">
-                                <MiniPlayer width="100%" height="100%" />
-                            </Box>
-                        )}
+                        <Box width="auto" height="100%">
+                            <MiniPlayer width="100%" height="100%" />
+                        </Box>
                     </Box>
 
                     <Box height="50%" width="100%">

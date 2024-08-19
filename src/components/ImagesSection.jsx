@@ -72,6 +72,7 @@ function ImagesSection() {
             position="relative"
             borderRadius="2xl"
             border="2px solid white"
+            mr={3}
         >
             <Box 
                 display="flex"
