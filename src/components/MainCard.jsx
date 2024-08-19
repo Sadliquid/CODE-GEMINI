@@ -1,13 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 
-import { Card, Box, Text, useMediaQuery } from "@chakra-ui/react";
+import { Card, Box, useMediaQuery } from "@chakra-ui/react";
 import NotesSection from "./NotesSection";
 import ImagesSection from "./ImagesSection";
 import MiniPlayer from "./MiniPlayer";
 
 function MainCard() {
     const [isSmallerThan770px] = useMediaQuery("(max-width: 770px)");
+    const [isSmallerThan695px] = useMediaQuery("(max-width: 695px)");
 
     return (
         <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
@@ -26,17 +27,17 @@ function MainCard() {
             >
                 <Box display="flex" flexDirection="column" height="100%" width="100%">
 
-                    {/* Top half with spacing between Images and Placeholder sections */}
                     <Box display="flex" height="50%" width="100%" marginBottom={3}>
-                        <Box width="70%" height="100%" marginRight={3}>
+                        <Box width={isSmallerThan695px ? "100%" : "70%"} height="100%" marginRight={3}>
                             <ImagesSection width="100%" height="100%" />
                         </Box>
-                        <Box width="30%" height="100%">
-                            <MiniPlayer width="100%" height="100%" />
-                        </Box>
+                        {!isSmallerThan695px && (
+                            <Box width="30%" height="100%">
+                                <MiniPlayer width="100%" height="100%" />
+                            </Box>
+                        )}
                     </Box>
 
-                    {/* Bottom half for Notes section with space above it */}
                     <Box height="50%" width="100%">
                         <NotesSection width="100%" height="100%" />
                     </Box>

@@ -140,7 +140,7 @@ function MiniPlayer() {
             />
 
             <Box mt={3} ml={2}>
-                <Text fontSize="2xs" color="white">
+                <Text fontSize="2xs" color="white" overflow="hidden" whiteSpace={"nowrap"} textOverflow={"ellipsis"}>
                     Prakhar's Mini Player
                 </Text>
                 <motion.div
@@ -149,11 +149,11 @@ function MiniPlayer() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <Text fontWeight="bold" fontSize="lg" color="white" textAlign={"left"} mt={-0.5}>
+                    <Text fontWeight="bold" fontSize="lg" color="white" textAlign={"left"} mt={-0.5} overflow="hidden" whiteSpace={"nowrap"} textOverflow={"ellipsis"}>
                         {songs[currentSongIndex].songName}
                     </Text>
 
-                    <Text fontSize="xs" color="white" mt={-0.5}>
+                    <Text fontSize="xs" color="white" mt={-0.5} overflow="hidden" whiteSpace={"nowrap"} textOverflow={"ellipsis"}>
                         {songs[currentSongIndex].songArtist}
                     </Text>
                 </motion.div>
@@ -178,7 +178,7 @@ function MiniPlayer() {
                 </Slider>
             </Box>
 
-            <Box display="flex" justifyContent={"center"} mt={4}>
+            <Box display="flex" justifyContent={"center"} mt={4} mb={1} ml={1} mr={1}>
                 <HStack spacing={4}>
                     <Box as={FaStepBackward}
                         onClick={handlePreviousSong}
