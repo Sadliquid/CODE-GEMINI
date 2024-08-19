@@ -131,6 +131,9 @@ function MiniPlayer() {
                 width="100%"
                 height="45%"
                 objectFit="cover"
+                sx={{
+                    userSelect: "none",
+                }}
             />
 
             <Box mt={3} ml={2}>

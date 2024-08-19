@@ -19,6 +19,9 @@ function ImageCard({ src }) {
                 objectFit="cover"
                 width="100%"     
                 height="100%"
+                sx={{
+                    userSelect: "none",
+                }}
             />
         </Card>
     );
