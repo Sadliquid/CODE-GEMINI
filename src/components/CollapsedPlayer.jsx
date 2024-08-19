@@ -38,7 +38,7 @@ function CollapsedPlayer({ image, songName, isPlaying, handlePreviousSong, toggl
                                     initial={{ opacity: 0, y: 5 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6 }}
-                                    style={{ width: "45%" }}
+                                    style={{ width: "37%" }}
                                 >
                                     <Text ml={2} fontSize={"sm"} overflow="hidden" whiteSpace={"nowrap"} textOverflow={"ellipsis"}>{songName}</Text>
                                 </motion.div>

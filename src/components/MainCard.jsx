@@ -1,14 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 
-import { Card, Box, useMediaQuery } from "@chakra-ui/react";
+import { Card, Box, Heading, useMediaQuery } from "@chakra-ui/react";
 import NotesSection from "./NotesSection";
 import ImagesSection from "./ImagesSection";
 import MiniPlayer from "./MiniPlayer";
 
 function MainCard() {
     const [isSmallerThan770px] = useMediaQuery("(max-width: 770px)");
-    const [isSmallerThan695px] = useMediaQuery("(max-width: 695px)");
 
     return (
         <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
@@ -26,7 +25,7 @@ function MainCard() {
                 backdropFilter="blur(2px)"
             >
                 <Box display="flex" flexDirection="column" height="100%" width="100%">
-
+                    <Heading textAlign={"center"} mt={-2} mb={2} color="white" fontFamily={"cursive"}>Prakhar's Gallery</Heading>
                     <Box display="flex" height="50%" width="100%" marginBottom={3}>
                         <Box width="auto" height="100%">
                             <ImagesSection width="100%" height="100%" />
