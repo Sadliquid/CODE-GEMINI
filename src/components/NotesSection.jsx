@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react"
+import { Box, useBreakpointValue } from "@chakra-ui/react"
 import NoteCard from "./NoteCard"
 
 function NotesSection() {
@@ -60,15 +60,24 @@ Thank you for being the most awesome class rep always helping to convey message 
 All the best for your adventures up ahead !
 `,
     }
+
+    const cardWidth = useBreakpointValue({
+        base: "100%",  // For very small screens
+        sm: "45%",    // For small screens
+        md: "25%", // For medium screens
+        lg: "20%",    // For large screens
+    });
+
     return (
         <Box
-            display="grid"
-            gridTemplateColumns="repeat(auto-fill, minmax(200px, 1fr))"
+            display="flex"
+            justifyContent="space-evenly"
+            flexWrap="wrap"
             gap={2}
             height="100%"
             padding={4}
             overflowY="scroll"
-            overflowX="hidden" 
+            overflowX="hidden"
             sx={{
                 '&::-webkit-scrollbar': {
                     width: '8px',
@@ -89,7 +98,9 @@ All the best for your adventures up ahead !
             }}
         >
             {Object.keys(notes).map((name) => (
-                <NoteCard key={name} name={name} text={notes[name]} />
+                <Box key={name} width={cardWidth}>
+                    <NoteCard name={name} text={notes[name]} />
+                </Box>
             ))}
         </Box>
     )

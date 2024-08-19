@@ -21,7 +21,7 @@ const NoteCard = ({ name, text }) => {
                 p={4}
                 borderRadius="md"
                 boxShadow="lg"
-                w="200px"
+                w="100%"
                 h="250px"
                 mb={3}
                 position="relative"
