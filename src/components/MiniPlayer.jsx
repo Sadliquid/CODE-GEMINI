@@ -67,6 +67,12 @@ function MiniPlayer() {
 
         audioRef.current.addEventListener("timeupdate", updateProgress);
 
+        const handleSongEnd = () => {
+            handleNextSong();
+        };
+
+        audioRef.current.addEventListener("ended", handleSongEnd);
+
         if (isPlaying) {
             audioRef.current.play();
         }
@@ -74,6 +80,7 @@ function MiniPlayer() {
         return () => {
             audioRef.current.pause();
             audioRef.current.removeEventListener("timeupdate", updateProgress);
+            audioRef.current.removeEventListener("ended", handleSongEnd);
         };
     }, [isPlaying]);
 
@@ -100,14 +107,12 @@ function MiniPlayer() {
     };
 
     const handleSliderChangeStart = () => {
-        // Pause the song when dragging starts
         if (isPlaying) {
             audioRef.current.pause();
         }
     };
 
     const handleSliderChangeEnd = () => {
-        // Resume the song when dragging ends
         if (isPlaying) {
             audioRef.current.play();
         }
@@ -131,9 +136,7 @@ function MiniPlayer() {
                 width="100%"
                 height="45%"
                 objectFit="cover"
-                sx={{
-                    userSelect: "none",
-                }}
+                sx={{ userSelect: "none" }}
             />
 
             <Box mt={3} ml={2}>
