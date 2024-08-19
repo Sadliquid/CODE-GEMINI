@@ -80,7 +80,7 @@ All the best for your adventures up ahead !
             overflowX="hidden"
             sx={{
                 '&::-webkit-scrollbar': {
-                    width: '8px',
+                    width: '10px'
                 },
                 '&::-webkit-scrollbar-track': {
                     background: '#f1f1f1',
@@ -88,7 +88,7 @@ All the best for your adventures up ahead !
                 },
                 '&::-webkit-scrollbar-thumb': {
                     background: '#888',
-                    borderRadius: '24px',
+                    borderRadius: '10px',
                 },
                 '&::-webkit-scrollbar-thumb:hover': {
                     background: '#555',

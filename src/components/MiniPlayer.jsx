@@ -3,7 +3,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Card, Box, Text, Slider, SliderTrack, SliderFilledTrack, SliderThumb, Image, HStack, useMediaQuery } from "@chakra-ui/react";
-import { FaPlay, FaPause, FaStepBackward, FaStepForward } from "react-icons/fa";
+import { FaPlay, FaPause, FaForward, FaBackward } from "react-icons/fa";
 import { motion } from "framer-motion";
 import CollapsedPlayer from "./CollapsedPlayer";
 
@@ -184,7 +184,7 @@ function MiniPlayer() {
 
                     <Box display="flex" justifyContent={"center"} mt={4} mb={1} ml={1} mr={1}>
                         <HStack spacing={4}>
-                            <Box as={FaStepBackward}
+                            <Box as={FaBackward}
                                 onClick={handlePreviousSong}
                                 aria-label="Previous Song"
                                 color="white"
@@ -208,7 +208,7 @@ function MiniPlayer() {
                                     sx={{ cursor: "pointer" }}
                                 />
                             )}
-                            <Box as={FaStepForward}
+                            <Box as={FaForward}
                                 onClick={handleNextSong}
                                 aria-label="Next Song"
                                 color="white"
@@ -224,14 +224,21 @@ function MiniPlayer() {
                     zIndex={999}
                     justifyContent="center" 
                     alignItems="center" 
-                    position="absolute" 
+                    position="fixed" 
                     bottom="0" 
                     left="50%"
                     width="100%"
                     transform="translateX(-50%)" 
                     padding={3}
                 >
-                    <CollapsedPlayer />
+                    <CollapsedPlayer 
+                        image={songs[currentSongIndex].audioCover} 
+                        songName={songs[currentSongIndex].songName} 
+                        isPlaying={isPlaying} 
+                        handlePreviousSong={handlePreviousSong} 
+                        togglePlayPause={togglePlayPause} 
+                        handleNextSong={handleNextSong} 
+                    />
                 </Box>
             )}
         </>
