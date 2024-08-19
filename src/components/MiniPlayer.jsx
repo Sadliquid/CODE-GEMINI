@@ -53,13 +53,10 @@ function MiniPlayer() {
 
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
-    const audioRef = useRef(new Audio(songs[currentSongIndex].audioSrc));
+    const audioRef = useRef(new Audio(songs[0].audioSrc)); // Set initial song here
     const [progress, setProgress] = useState(0);
 
     useEffect(() => {
-        audioRef.current.pause();
-        audioRef.current = new Audio(songs[currentSongIndex].audioSrc);
-
         const updateProgress = () => {
             const duration = audioRef.current.duration || 0;
             const currentTime = audioRef.current.currentTime;
@@ -77,10 +74,18 @@ function MiniPlayer() {
             audioRef.current.pause();
             audioRef.current.removeEventListener("timeupdate", updateProgress);
         };
-    }, [currentSongIndex, isPlaying]);
+    }, [isPlaying]);
+
+    useEffect(() => {
+        audioRef.current.src = songs[currentSongIndex].audioSrc;
+        audioRef.current.load(); // Reload the new audio source
+        if (isPlaying) {
+            audioRef.current.play(); // Play the new song immediately if playing
+        }
+    }, [currentSongIndex]);
 
     const togglePlayPause = () => {
-        setIsPlaying(!isPlaying);
+        setIsPlaying((prevState) => !prevState);
         if (isPlaying) {
             audioRef.current.pause();
         } else {
