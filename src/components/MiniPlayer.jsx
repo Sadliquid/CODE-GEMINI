@@ -99,6 +99,20 @@ function MiniPlayer() {
         audioRef.current.currentTime = (audioRef.current.duration * value) / 100;
     };
 
+    const handleSliderChangeStart = () => {
+        // Pause the song when dragging starts
+        if (isPlaying) {
+            audioRef.current.pause();
+        }
+    };
+
+    const handleSliderChangeEnd = () => {
+        // Resume the song when dragging ends
+        if (isPlaying) {
+            audioRef.current.play();
+        }
+    };
+
     const handleNextSong = () => {
         setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
     };
@@ -143,7 +157,10 @@ function MiniPlayer() {
                 <Slider
                     value={progress}
                     onChange={handleSliderChange}
+                    onChangeStart={handleSliderChangeStart}
+                    onChangeEnd={handleSliderChangeEnd}
                     focusThumbOnChange={false}
+                    step={0.05}
                     min={0}
                     max={100}
                     width="90%"
