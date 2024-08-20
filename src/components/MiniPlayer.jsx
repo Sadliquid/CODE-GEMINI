@@ -9,6 +9,9 @@ import CollapsedPlayer from "./CollapsedPlayer";
 
 function MiniPlayer() {
     const [isSmallerThan695px] = useMediaQuery("(max-width: 695px)");
+    const [isShorterThan477px] = useMediaQuery("(max-height: 477px)");
+    const [isShorterThan400px] = useMediaQuery("(max-height: 400px)");
+
     const songs = [
         {
             songName: "Oakscreen",
@@ -132,38 +135,63 @@ function MiniPlayer() {
 
     return (
         <>
-            {!isSmallerThan695px ? (
-                <Card width="100%" height="100%" borderRadius="xl" padding={4} boxShadow="xl" border={"2px solid white"} backgroundColor="rgba(255, 255, 255, 0.2)" ml={3}>
-                    <Image
-                        src={songs[currentSongIndex].audioCover}
-                        borderRadius="lg"
-                        width="100%"
-                        height="45%"
-                        objectFit="cover"
-                        sx={{ userSelect: "none" }}
-                    />
-
-                    <Box mt={3} ml={2}>
-                        <Text fontSize="2xs" color="white" overflow="hidden" whiteSpace={"nowrap"} textOverflow={"ellipsis"}>
-                            Prakhar's Mini Player
-                        </Text>
-                        <motion.div
-                            key={songs[currentSongIndex].songName}
-                            initial={{ opacity: 0, y: 5 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            <Text fontWeight="bold" fontSize="lg" color="white" textAlign={"left"} mt={-0.5} overflow="hidden" whiteSpace={"nowrap"} textOverflow={"ellipsis"}>
-                                {songs[currentSongIndex].songName}
+            {(!isSmallerThan695px && !isShorterThan400px) ? (
+                <Card 
+                    width="100%"
+                    height="100%" 
+                    maxHeight="300px" /* Set a maximum height for the card */
+                    borderRadius="xl" 
+                    padding={4} 
+                    boxShadow="xl" 
+                    border={"2px solid white"} 
+                    backgroundColor="rgba(255, 255, 255, 0.2)" 
+                    ml={3} 
+                    overflow="hidden" /* Hide overflow by default */
+                >
+                    <Box 
+                        overflowY="auto" /* Enable vertical scrolling if content overflows */
+                        maxHeight="calc(100% - 60px)" /* Adjust height to leave room for controls */
+                        sx={{
+                            '&::-webkit-scrollbar': {
+                                width: '0px'
+                            },
+                            '&::-webkit-scrollbar-thumb': {
+                                background: 'transparent'
+                            },
+                        }}
+                    >
+                        {!isShorterThan477px && (
+                            <Image
+                                src={songs[currentSongIndex].audioCover}
+                                borderRadius="lg"
+                                width="100%"
+                                height="60%"
+                                objectFit="cover"
+                                sx={{ userSelect: "none" }}
+                            />
+                        )}
+                        <Box mt={3} ml={2}>
+                            <Text fontSize="2xs" color="white" overflow="hidden" whiteSpace={"nowrap"} textOverflow={"ellipsis"}>
+                                Prakhar's Mini Player
                             </Text>
-
-                            <Text fontSize="xs" color="white" mt={-0.5} overflow="hidden" whiteSpace={"nowrap"} textOverflow={"ellipsis"}>
-                                {songs[currentSongIndex].songArtist}
-                            </Text>
-                        </motion.div>
+                            <motion.div
+                                key={songs[currentSongIndex].songName}
+                                initial={{ opacity: 0, y: 5 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6 }}
+                            >
+                                <Text fontWeight="bold" fontSize="lg" color="white" textAlign={"left"} mt={isShorterThan477px ? 4 : -0.5} overflow="hidden" whiteSpace={"nowrap"} textOverflow={"ellipsis"}>
+                                    {songs[currentSongIndex].songName}
+                                </Text>
+                
+                                <Text fontSize="xs" color="white" mt={isShorterThan477px ? 0 : -0.5} overflow="hidden" whiteSpace={"nowrap"} textOverflow={"ellipsis"}>
+                                    {songs[currentSongIndex].songArtist}
+                                </Text>
+                            </motion.div>
+                        </Box>
                     </Box>
-
-                    <Box display="flex" justifyContent={"center"} mt={2}>
+                
+                    <Box display="flex" justifyContent={"center"} mt={isShorterThan477px ? 4 : 2}>
                         <Slider
                             value={progress}
                             onChange={handleSliderChange}
@@ -181,8 +209,8 @@ function MiniPlayer() {
                             <SliderThumb boxSize={3} />
                         </Slider>
                     </Box>
-
-                    <Box display="flex" justifyContent={"center"} mt={4} mb={1} ml={1} mr={1}>
+                
+                    <Box display="flex" justifyContent={"center"} mt={isShorterThan477px ? 6 : 4} ml={1} mr={1}>
                         <HStack spacing={4}>
                             <Box as={FaBackward}
                                 onClick={handlePreviousSong}
@@ -217,7 +245,7 @@ function MiniPlayer() {
                             />
                         </HStack>
                     </Box>
-                </Card>
+                </Card>            
             ) : (
                 <Box 
                     display="flex"

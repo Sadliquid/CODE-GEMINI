@@ -9,6 +9,7 @@ import MiniPlayer from "./MiniPlayer";
 function MainCard() {
     const [isSmallerThan770px] = useMediaQuery("(max-width: 770px)");
     const [isSmallerThan695px] = useMediaQuery("(max-width: 695px)");
+    const [isShorterThan400px] = useMediaQuery("(max-height: 400px)");
 
     return (
         <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
@@ -28,10 +29,10 @@ function MainCard() {
                 <Box display="flex" flexDirection="column" height="100%" width="100%">
                     <Heading textAlign={"center"} mt={-2} mb={2} color="white" fontFamily={"cursive"}>Prakhar's Gallery</Heading>
                     <Box display="flex" height="50%" width="100%" marginBottom={3}>
-                        <Box width={isSmallerThan695px ? "100%" : "70%"} height="100%">
+                        <Box width={(isSmallerThan695px || isShorterThan400px) ? "100%" : "70%"} height="100%">
                             <ImagesSection width="100%" height="100%" />
                         </Box>
-                        <Box width={isSmallerThan695px ? "0%" : "30%"} height="100%">
+                        <Box width={(isSmallerThan695px || isShorterThan400px) ? "0%" : "30%"} height="auto">
                             <MiniPlayer width="100%" height="100%" />
                         </Box>
                     </Box>

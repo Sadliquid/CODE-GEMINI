@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import { Card, Image, Text, Box, HStack, useMediaQuery } from "@chakra-ui/react";
 import { FaPlay, FaPause, FaForward, FaBackward } from "react-icons/fa";
@@ -38,10 +39,11 @@ function CollapsedPlayer({ image, songName, isPlaying, handlePreviousSong, toggl
                                 <Image
                                     src={image}
                                     borderRadius="md"
+                                    minW={"38px"}
                                     width="38px"
+                                    minH={"38px"}
                                     height="38px"
                                     objectFit="cover"
-                                    ml={2}
                                     sx={{ userSelect: "none" }}
                                 />
                             </motion.div>
@@ -53,6 +55,7 @@ function CollapsedPlayer({ image, songName, isPlaying, handlePreviousSong, toggl
                                     transition={{ duration: 0.6 }}
                                     style={{ width: "37%" }}
                                 >
+                                    <Text ml={2} fontSize={"xs"} overflow="hidden" whiteSpace={"nowrap"} textOverflow={"ellipsis"} color="gray.500">Prakhar's Mini Player</Text>
                                     <Text ml={2} fontSize={"sm"} overflow="hidden" whiteSpace={"nowrap"} textOverflow={"ellipsis"}>{songName}</Text>
                                 </motion.div>
                             )}
