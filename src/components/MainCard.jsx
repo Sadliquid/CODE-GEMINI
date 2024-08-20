@@ -11,6 +11,7 @@ import CollapsedPlayer from "./CollapsedPlayer";
 function MainCard() {
     const [isSmallerThan770px] = useMediaQuery("(max-width: 770px)");
     const [isSmallerThan695px] = useMediaQuery("(max-width: 695px)");
+    const [isSmallerThan215px] = useMediaQuery("(max-width: 215px)");
     const [isShorterThan400px] = useMediaQuery("(max-height: 400px)");
 
     // These props need to be passed to the MiniPlayer and CollapsedPlayer components
@@ -103,7 +104,7 @@ function MainCard() {
     return (
         <>
             <Box>
-                <Box display="flex" justifyContent="center" alignItems="center" height={isSmallerThan695px ? "90vh" : "100vh"} overflow="hidden">
+                <Box display="flex" justifyContent="center" alignItems="center" height={(isSmallerThan695px && !isSmallerThan215px) ? "90vh" : "100vh"} overflow="hidden">
                     <Card
                         height="98%"
                         width={isSmallerThan770px ? "98%" : "80%"}
