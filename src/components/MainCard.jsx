@@ -12,7 +12,7 @@ function MainCard() {
     const [isShorterThan400px] = useMediaQuery("(max-height: 400px)");
 
     return (
-        <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
+        <Box display="flex" justifyContent="center" alignItems="center" height="100vh" overflow="hidden">
             <Card
                 height="98%"
                 width={isSmallerThan770px ? "98%" : "80%"}
@@ -25,19 +25,28 @@ function MainCard() {
                 backgroundClip="border-box"
                 boxShadow="0 2px 3px rgba(0, 0, 0, 0.1), inset 0 0 6px rgba(255, 255, 255, 0.2)"
                 backdropFilter="blur(2px)"
+                overflow="hidden"
             >
                 <Box display="flex" flexDirection="column" height="100%" width="100%">
                     <Heading textAlign={"center"} mt={-2} mb={2} color="white" fontFamily={"cursive"}>Prakhar's Gallery</Heading>
-                    <Box display="flex" height="50%" width="100%" marginBottom={3}>
-                        <Box width={(isSmallerThan695px || isShorterThan400px) ? "100%" : "70%"} height="100%">
+                    <Box display="flex" height="50%" width="100%" marginBottom={3} minHeight="200px">
+                        <Box 
+                            width={(isSmallerThan695px || isShorterThan400px) ? "100%" : "70%"} 
+                            height="100%" 
+                            minH={"174px"} 
+                            flexGrow={1}
+                        >
                             <ImagesSection width="100%" height="100%" />
                         </Box>
-                        <Box width={(isSmallerThan695px || isShorterThan400px) ? "0%" : "30%"} height="auto">
+                        <Box 
+                            width={(isSmallerThan695px || isShorterThan400px) ? "0%" : "30%"} 
+                            height="auto"
+                        >
                             <MiniPlayer width="100%" height="100%" />
                         </Box>
                     </Box>
 
-                    <Box height="50%" width="100%">
+                    <Box height="50%" width="100%" flexGrow={1}>
                         <NotesSection width="100%" height="100%" />
                     </Box>
 
@@ -47,4 +56,4 @@ function MainCard() {
     );
 }
 
-export default MainCard
+export default MainCard;

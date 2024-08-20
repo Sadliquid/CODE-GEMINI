@@ -25,7 +25,6 @@ const NoteCard = ({ name, text }) => {
                 w="100%"
                 h="250px"
                 mb={3}
-                position="relative"
                 transition="0.2s ease-in-out"
                 transform={`rotate(${randomDegree})`}
                 _hover={{
@@ -80,7 +79,6 @@ const NoteCard = ({ name, text }) => {
                     left="0"
                     width="100%"
                     height="100%"
-                    zIndex="999"
                     borderRadius={"2xl"}
                     bg="rgba(0, 0, 0, 0.5)"
                 >
