@@ -5,7 +5,6 @@ import { FaPlay, FaPause, FaForward, FaBackward } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 function CollapsedPlayer({ image, songName, isPlaying, handlePreviousSong, togglePlayPause, handleNextSong }) {
-    const [isSmallerThan500px] = useMediaQuery("(max-width: 500px)");
     const [isSmallerThan230px] = useMediaQuery("(max-width: 230px)");
     const [isSmallerThan215px] = useMediaQuery("(max-width: 215px)");
 
@@ -16,9 +15,14 @@ function CollapsedPlayer({ image, songName, isPlaying, handlePreviousSong, toggl
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.2 }}
-                    style={{ width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}
+                    style={{ 
+                        width: "100%", 
+                        height: "50px",
+                        bottom: 0, 
+                        zIndex: 1000,
+                    }}
                 >
-                    <Card width={isSmallerThan500px ? "100%" : "70%"} height="50px" display="flex" alignItems="center">
+                    <Card width="100%" height="50px" display="flex" alignItems="center">
                         <Box
                             display="flex"
                             alignItems="center"
@@ -28,7 +32,7 @@ function CollapsedPlayer({ image, songName, isPlaying, handlePreviousSong, toggl
                             <motion.div
                                 key={image}
                                 initial={{ scale: 0 }}
-                                animate={{ rotate: 180, scale: 1 }}
+                                animate={{ rotate: 360, scale: 1 }}
                                 transition={{
                                     type: "spring",
                                     stiffness: 260,

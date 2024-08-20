@@ -1,17 +1,22 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
-import { Box, Text, useMediaQuery } from '@chakra-ui/react';
-import { CloseIcon } from '@chakra-ui/icons';
-import { motion } from "framer-motion";
+import { Box, Text } from '@chakra-ui/react';
+// import { CloseIcon } from '@chakra-ui/icons';
+// import { motion } from "framer-motion";
+import NoteModal from './NoteModal';
 
 const NoteCard = ({ name, text }) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const randomDegree = String(Math.floor(Math.random() * 4) + 1) + "deg";
 
-    const [isSmallerThan465px] = useMediaQuery("(max-width: 575px)");
+    // const [isSmallerThan465px] = useMediaQuery("(max-width: 575px)");
 
     const handleClick = () => {
         setIsExpanded(!isExpanded);
+    };
+
+    const handleClose = () => {
+        setIsExpanded(false);
     };
 
     return (
@@ -69,7 +74,7 @@ const NoteCard = ({ name, text }) => {
                 </Text>
             </Box>
 
-            {isExpanded && (
+            {/* {isExpanded && (
                 <Box
                     display="flex"
                     justifyContent="center"
@@ -145,7 +150,13 @@ const NoteCard = ({ name, text }) => {
                         </Box>
                     </motion.div>
                 </Box>
-            )}
+            )} */}
+            <NoteModal 
+                isOpen={isExpanded} 
+                onClose={handleClose} 
+                name={name} 
+                text={text} 
+            />
         </>
     );
 };

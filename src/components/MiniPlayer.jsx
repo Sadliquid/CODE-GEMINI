@@ -1,67 +1,18 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react-hooks/exhaustive-deps */
 
-import { useState, useRef, useEffect } from "react";
+import { useEffect } from "react";
 import { Card, Box, Text, Slider, SliderTrack, SliderFilledTrack, SliderThumb, Image, HStack, useMediaQuery } from "@chakra-ui/react";
 import { FaPlay, FaPause, FaForward, FaBackward } from "react-icons/fa";
 import { motion } from "framer-motion";
-import CollapsedPlayer from "./CollapsedPlayer";
 
-function MiniPlayer() {
+function MiniPlayer({ songs, currentSongIndex, isPlaying, audioRef, progress, togglePlayPause, handleSliderChange, handleSliderChangeStart, handleSliderChangeEnd, handleNextSong, handlePreviousSong, setProgress }) {
     const [isSmallerThan695px] = useMediaQuery("(max-width: 695px)");
     const [isShorterThan477px] = useMediaQuery("(max-height: 477px)");
     const [isShorterThan400px] = useMediaQuery("(max-height: 400px)");
 
-    const songs = [
-        {
-            songName: "Oakscreen",
-            songArtist: "Soiboi and Peak Twilight",
-            audioSrc: "src/assets/audio/Oakscreen.mp3",
-            audioCover: "src/assets/audioCovers/PeakTwilight.png"
-        },
-        {
-            songName: "Magical Connection",
-            songArtist: "Peak Twilight and Prithvi",
-            audioSrc: "src/assets/audio/MagicalConnection.mp3",
-            audioCover: "src/assets/CozyWood.png"
-        },
-        {
-            songName: "Common Ground",
-            songArtist: "Peak Twilight",
-            audioSrc: "src/assets/audio/CommonGround.mp3",
-            audioCover: "src/assets/audioCovers/PeakTwilight.png"
-        },
-        {
-            songName: "Tourist",
-            songArtist: "Rj Pasin",
-            audioSrc: "src/assets/audio/Tourist.mp3",
-            audioCover: "src/assets/audioCovers/PeakTwilight.png"
-        },
-        {
-            songName: "Departure",
-            songArtist: "Peak Twilight & S N U G",
-            audioSrc: "src/assets/audio/Departure.mp3",
-            audioCover: "src/assets/audioCovers/PeakTwilight.png"
-        },
-        {
-            songName: "Desolation",
-            songArtist: "Peak Twilight & mell-ø",
-            audioSrc: "src/assets/audio/Desolation.mp3",
-            audioCover: "src/assets/audioCovers/PeakTwilight.png"
-        },
-        {
-            songName: "Lunar Shores",
-            songArtist: "Peak Twilight & no one's perfect",
-            audioSrc: "src/assets/audio/LunarShores.mp3",
-            audioCover: "src/assets/audioCovers/PeakTwilight.png"
-        }
-    ];
-
-    const [currentSongIndex, setCurrentSongIndex] = useState(0);
-    const [isPlaying, setIsPlaying] = useState(false);
-    const audioRef = useRef(new Audio(songs[0].audioSrc));
-    const [progress, setProgress] = useState(0);
-
+    // The 2 useEffect hooks below need to be called in this component itself, and cannot depend on the MainCard
     useEffect(() => {
         const updateProgress = () => {
             const duration = audioRef.current.duration || 0;
@@ -97,60 +48,24 @@ function MiniPlayer() {
         }
     }, [currentSongIndex]);
 
-    const togglePlayPause = () => {
-        setIsPlaying((prevState) => !prevState);
-        if (isPlaying) {
-            audioRef.current.pause();
-        } else {
-            audioRef.current.play();
-        }
-    };
-
-    const handleSliderChange = (value) => {
-        setProgress(value);
-        audioRef.current.currentTime = (audioRef.current.duration * value) / 100;
-    };
-
-    const handleSliderChangeStart = () => {
-        if (isPlaying) {
-            audioRef.current.pause();
-        }
-    };
-
-    const handleSliderChangeEnd = () => {
-        if (isPlaying) {
-            audioRef.current.play();
-        }
-    };
-
-    const handleNextSong = () => {
-        setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
-    };
-
-    const handlePreviousSong = () => {
-        setCurrentSongIndex((prevIndex) =>
-            prevIndex === 0 ? songs.length - 1 : prevIndex - 1
-        );
-    };
-
     return (
         <>
-            {(!isSmallerThan695px && !isShorterThan400px) ? (
+            {(!isSmallerThan695px && !isShorterThan400px) && (
                 <Card 
                     width="100%"
                     height="100%" 
-                    maxHeight="300px" /* Set a maximum height for the card */
+                    maxHeight="300px"
                     borderRadius="xl" 
                     padding={4} 
                     boxShadow="xl" 
                     border={"2px solid white"} 
                     backgroundColor="rgba(255, 255, 255, 0.2)" 
                     ml={3} 
-                    overflow="hidden" /* Hide overflow by default */
+                    overflow="hidden"
                 >
                     <Box 
-                        overflowY="auto" /* Enable vertical scrolling if content overflows */
-                        maxHeight="calc(100% - 60px)" /* Adjust height to leave room for controls */
+                        overflowY="auto"
+                        maxHeight="calc(100% - 60px)"
                         sx={{
                             '&::-webkit-scrollbar': {
                                 width: '0px'
@@ -165,7 +80,7 @@ function MiniPlayer() {
                                 src={songs[currentSongIndex].audioCover}
                                 borderRadius="lg"
                                 width="100%"
-                                height="60%"
+                                height="50%"
                                 objectFit="cover"
                                 sx={{ userSelect: "none" }}
                             />
@@ -246,28 +161,6 @@ function MiniPlayer() {
                         </HStack>
                     </Box>
                 </Card>            
-            ) : (
-                <Box 
-                    display="flex"
-                    zIndex={999}
-                    justifyContent="center" 
-                    alignItems="center" 
-                    position="fixed" 
-                    bottom="0" 
-                    left="50%"
-                    width="100%"
-                    transform="translateX(-50%)" 
-                    padding={3}
-                >
-                    <CollapsedPlayer 
-                        image={songs[currentSongIndex].audioCover} 
-                        songName={songs[currentSongIndex].songName} 
-                        isPlaying={isPlaying} 
-                        handlePreviousSong={handlePreviousSong} 
-                        togglePlayPause={togglePlayPause} 
-                        handleNextSong={handleNextSong} 
-                    />
-                </Box>
             )}
         </>
     );
