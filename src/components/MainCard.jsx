@@ -17,6 +17,12 @@ function MainCard() {
     // These props need to be passed to the MiniPlayer and CollapsedPlayer components
     const songs = [
         {
+            songName: "Smoke and Chill",
+            songArtist: "Gaming Sensei",
+            audioSrc: "src/assets/audio/SmokeNChill.mp3",
+            audioCover: "src/assets/audioCovers/PeakTwilight.png"
+        },
+        {
             songName: "Oakscreen",
             songArtist: "Soiboi and Peak Twilight",
             audioSrc: "src/assets/audio/Oakscreen.mp3",
