@@ -124,13 +124,13 @@ function MainCard() {
                         </Heading>
                         <Box display="flex" height={isSmallerThan430px ? "30%" : "50%"} width="100%" marginBottom={3} minHeight="200px">
                             <Box
-                                width={isSmallerThan695px || isShorterThan400px ? "100%" : "70%"}
+                                width={(isSmallerThan695px || isShorterThan400px) ? "100%" : "70%"}
                                 height="100%"
                                 flexGrow={1}
                             >
                                 <ImagesSection width="100%" height="100%" />
                             </Box>
-                            <Box width={isSmallerThan695px ? "0%" : "30%"} minW={isShorterThan400px ? "196px" : "none"} height="100%">
+                            <Box width={isSmallerThan695px ? "0%" : "30%"} minW={!isSmallerThan695px ? "196px" : "none"} height="100%">
                                 <MiniPlayer
                                     songs={songs}
                                     currentSongIndex={currentSongIndex}
