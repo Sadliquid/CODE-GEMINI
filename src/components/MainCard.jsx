@@ -130,10 +130,8 @@ function MainCard() {
                             >
                                 <ImagesSection width="100%" height="100%" />
                             </Box>
-                            <Box width={isSmallerThan695px ? "0%" : "30%"} height="100%">
+                            <Box width={isSmallerThan695px ? "0%" : "30%"} minW={"196px"} height="100%">
                                 <MiniPlayer
-                                    width="100%"
-                                    height="100%"
                                     songs={songs}
                                     currentSongIndex={currentSongIndex}
                                     isPlaying={isPlaying}
