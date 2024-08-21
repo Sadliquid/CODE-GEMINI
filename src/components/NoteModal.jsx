@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
-import { Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, Text } from '@chakra-ui/react';
+import { Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, Text, Box, Image } from '@chakra-ui/react';
 
 const NoteModal = ({ isOpen, onClose, name, text, image, video }) => {
 
@@ -35,23 +35,46 @@ const NoteModal = ({ isOpen, onClose, name, text, image, video }) => {
                 }}
             >
                 <ModalCloseButton/>
-                <ModalBody p={5}>
-                    <Text
-                        fontFamily="'Patrick Hand', sans-serif"
-                        fontSize="md"
-                        color="gray.800"
-                        whiteSpace="pre-line"
-                        mt={3}
-                    >
-                        {text}
-                    </Text>
-                    <Text
-                        alignSelf="flex-start"
-                        fontStyle="italic"
-                        mt={5}
-                    >
-                        ~{" " + name}
-                    </Text>
+                <ModalBody p={5} display="flex" flexDir="column" mt={3}>
+                    <Box>
+                        <Text
+                            fontFamily="'Patrick Hand', sans-serif"
+                            fontSize="md"
+                            color="gray.800"
+                            whiteSpace="pre-line"
+                            mt={3}
+                        >
+                            {text}
+                        </Text>
+                        <Text
+                            alignSelf="flex-start"
+                            fontStyle="italic"
+                            mt={5}
+                        >
+                            ~{" " + name}
+                        </Text>
+                    </Box>
+                    {image !== "none" && (
+                        <Image 
+                            src={image}
+                            alt="Image"
+                            borderRadius="md"
+                            mt={5}
+                            maxW="400px"
+                            objectFit={"cover"}
+                        />
+                    )}
+                    {video !== "none" && (
+                        <Box mt={5} frameBorder={0} maxW="400px" objectFit={"cover"}>
+                            <iframe
+                                src={video}
+                                title="Video"
+                                width="100%"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            />
+                        </Box>
+                    )}
                 </ModalBody>
             </ModalContent>
         </Modal>
