@@ -28,6 +28,7 @@ function ImagesSection() {
     const pauseAutoScroll = () => {
         if (autoScroll !== false) {
             setAutoScroll(false);
+            toast.closeAll();
             toast({
                 title: "Auto-scroll paused!",
                 position: "bottom-right",
@@ -42,6 +43,7 @@ function ImagesSection() {
     const enableAutoScroll = () => {
         if (autoScroll !== true) {
             setAutoScroll(true);
+            toast.closeAll();
             toast({
                 title: "Auto-scroll re-enabled",
                 position: "bottom-right",
