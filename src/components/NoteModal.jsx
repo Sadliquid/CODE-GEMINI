@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
 import { Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, Text } from '@chakra-ui/react';
 
-const NoteModal = ({ isOpen, onClose, name, text }) => {
+const NoteModal = ({ isOpen, onClose, name, text, image, video }) => {
 
     return (
         <Modal isOpen={isOpen} onClose={onClose} isCentered>

@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
+
 import { useState } from 'react';
 import { Box, Text } from '@chakra-ui/react';
 import NoteModal from './NoteModal';
 
-const NoteCard = ({ name, text }) => {
+const NoteCard = ({ name, text, image, video }) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const randomDegree = String(Math.floor(Math.random() * 4) + 1) + "deg";
 
@@ -69,12 +70,14 @@ const NoteCard = ({ name, text }) => {
                     ~{" " + name}
                 </Text>
             </Box>
-            
+
             <NoteModal 
                 isOpen={isExpanded} 
                 onClose={handleClose} 
                 name={name} 
-                text={text} 
+                text={text}
+                image={image}
+                video={video}
             />
         </>
     );
