@@ -102,7 +102,7 @@ function MainCard() {
     };
 
     return (
-        <Box height="100vh" overflow="hidden" position="relative">
+        <Box height="100vh" overflow="hidden" position="relative" minW="300px">
             <Box display="flex" justifyContent="center" alignItems="center" height="100%">
                 <Card
                     height="98%"
