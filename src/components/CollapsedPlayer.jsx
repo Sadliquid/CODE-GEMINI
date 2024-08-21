@@ -16,10 +16,14 @@ function CollapsedPlayer({ image, songName, isPlaying, handlePreviousSong, toggl
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.2 }}
                     style={{ 
-                        width: "100%", 
+                        position: "fixed",
+                        bottom: 13,
+                        left: "auto",
+                        right: "auto",
+                        width: "96%",
                         height: "50px",
-                        bottom: 0, 
                         zIndex: 1000,
+                        borderRadius: "2xl",
                     }}
                 >
                     <Card width="100%" height="50px" display="flex" alignItems="center">
@@ -104,4 +108,4 @@ function CollapsedPlayer({ image, songName, isPlaying, handlePreviousSong, toggl
     );
 }
 
-export default CollapsedPlayer
+export default CollapsedPlayer;
