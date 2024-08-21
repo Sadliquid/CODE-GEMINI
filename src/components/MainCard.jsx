@@ -122,7 +122,7 @@ function MainCard() {
                         <Heading textAlign="center" mt={-2} mb={3} color="white" fontFamily="cursive">
                             Prakhar's Gallery
                         </Heading>
-                        <Box display="flex" height={isSmallerThan430px ? "30%" : "50%"} width="100%" marginBottom={3} minHeight="200px">
+                        <Box display="flex" height={isSmallerThan430px ? "30%" : "50%"} width="100%" marginBottom={3} minHeight="200px" gap={3}>
                             <Box
                                 width={(isSmallerThan695px || isShorterThan400px) ? "100%" : "70%"}
                                 height="100%"

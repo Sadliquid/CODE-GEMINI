@@ -58,7 +58,6 @@ function MiniPlayer({ songs, currentSongIndex, isPlaying, audioRef, progress, to
                     boxShadow="xl" 
                     border={"2px solid white"} 
                     backgroundColor="rgba(255, 255, 255, 0.2)" 
-                    ml={3} 
                     overflow="hidden"
                 >
                     <Box 
