@@ -53,8 +53,7 @@ function MiniPlayer({ songs, currentSongIndex, isPlaying, audioRef, progress, to
             {(!isSmallerThan695px && !isShorterThan400px) && (
                 <Card 
                     width="100%"
-                    height="100%" 
-                    
+                    height="100%"
                     borderRadius="xl" 
                     padding={4} 
                     boxShadow="xl" 
@@ -80,13 +79,13 @@ function MiniPlayer({ songs, currentSongIndex, isPlaying, audioRef, progress, to
                                 src={songs[currentSongIndex].audioCover}
                                 borderRadius="lg"
                                 width="100%"
-                                height="50%"
+                                height="60%"
                                 objectFit="cover"
                                 sx={{ userSelect: "none" }}
                             />
                         )}
-                        <Box mt={3} ml={2}>
-                            <Text fontSize="2xs" color="white" overflow="hidden" whiteSpace={"nowrap"} textOverflow={"ellipsis"}>
+                        <Box mt={isShorterThan477px ? 0 : 3} ml={2}>
+                            <Text fontSize={isShorterThan477px ? "xs" : "2xs"} color="white" overflow="hidden" whiteSpace={"nowrap"} textOverflow={"ellipsis"}>
                                 Prakhar's Mini Player
                             </Text>
                             <motion.div
