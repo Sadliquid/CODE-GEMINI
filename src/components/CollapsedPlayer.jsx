@@ -17,10 +17,10 @@ function CollapsedPlayer({ image, songName, isPlaying, handlePreviousSong, toggl
                     transition={{ duration: 0.2 }}
                     style={{ 
                         position: "fixed",
-                        bottom: 13,
+                        bottom: 14,
                         left: "auto",
                         right: "auto",
-                        width: "96%",
+                        width: "95%",
                         height: "50px",
                         zIndex: 1000,
                         borderRadius: "2xl",

@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 function MiniPlayer({ songs, currentSongIndex, isPlaying, audioRef, progress, togglePlayPause, handleSliderChange, handleSliderChangeStart, handleSliderChangeEnd, handleNextSong, handlePreviousSong, setProgress }) {
     const [isSmallerThan695px] = useMediaQuery("(max-width: 695px)");
     const [isShorterThan477px] = useMediaQuery("(max-height: 477px)");
-    const [isShorterThan400px] = useMediaQuery("(max-height: 400px)");
 
     // The 2 useEffect hooks below need to be called in this component itself, and cannot depend on the MainCard
     useEffect(() => {
@@ -50,7 +49,7 @@ function MiniPlayer({ songs, currentSongIndex, isPlaying, audioRef, progress, to
 
     return (
         <>
-            {(!isSmallerThan695px && !isShorterThan400px) && (
+            {(!isSmallerThan695px) && (
                 <Card 
                     width="100%"
                     height="100%"
