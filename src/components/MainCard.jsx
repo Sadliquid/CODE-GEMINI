@@ -127,6 +127,7 @@ function MainCard() {
                                 width={(isSmallerThan695px || isShorterThan400px) ? "100%" : "70%"}
                                 height="100%"
                                 flexGrow={1}
+                                mr={isSmallerThan695px ? -2.5 : 0}
                             >
                                 <ImagesSection width="100%" height="100%" />
                             </Box>
