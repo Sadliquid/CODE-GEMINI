@@ -126,7 +126,6 @@ function MainCard() {
                             <Box
                                 width={isSmallerThan695px || isShorterThan400px ? "100%" : "70%"}
                                 height="100%"
-                                minH="174px"
                                 flexGrow={1}
                             >
                                 <ImagesSection width="100%" height="100%" />
@@ -142,6 +141,8 @@ function MainCard() {
                                     progress={progress}
                                     togglePlayPause={togglePlayPause}
                                     handleSliderChange={handleSliderChange}
+                                    handleSliderChangeStart={handleSliderChangeStart}
+                                    handleSliderChangeEnd={handleSliderChangeEnd}
                                     handleNextSong={handleNextSong}
                                     handlePreviousSong={handlePreviousSong}
                                 />
