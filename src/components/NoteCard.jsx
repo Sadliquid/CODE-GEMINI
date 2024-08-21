@@ -61,7 +61,7 @@ const NoteCard = ({ name, text }) => {
                     textOverflow="ellipsis"
                     whiteSpace="normal"
                     wordBreak="break-word"
-                    noOfLines={7}
+                    noOfLines={5}
                 >
                     {text}
                 </Text>
