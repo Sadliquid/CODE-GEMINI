@@ -28,7 +28,7 @@ const NoteCard = ({ name, text }) => {
                 borderRadius="md"
                 boxShadow="lg"
                 w="100%"
-                h="250px"
+                h="200px"
                 mb={3}
                 transition="0.2s ease-in-out"
                 transform={`rotate(${randomDegree})`}
