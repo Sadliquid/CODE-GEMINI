@@ -1,7 +1,16 @@
 import { Box } from '@chakra-ui/react';
 import MainCard from '../components/MainCard';
+import { useState, useEffect } from 'react';
 
 function Homepage() {
+	const [videoLoaded, setVideoLoaded] = useState(false);
+
+	useEffect(() => {
+		const video = document.querySelector('video');
+		video.addEventListener('loadeddata', () => {
+			setVideoLoaded(true);
+		});
+	}, []);
 
 	return (
 		<>
@@ -31,6 +40,8 @@ function Homepage() {
 							height: '100%',
 							objectFit: 'cover',
 							zIndex: -2,
+							opacity: videoLoaded ? 1 : 0,
+							transition: 'opacity 1s ease-in-out', // Smooth fade-in transition
 						}}
 					>
 						<source src="src/assets/lofiBackground.mp4" type="video/mp4" />
