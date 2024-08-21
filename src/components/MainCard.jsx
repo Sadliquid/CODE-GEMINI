@@ -143,6 +143,7 @@ function MainCard() {
                                     handleSliderChangeEnd={handleSliderChangeEnd}
                                     handleNextSong={handleNextSong}
                                     handlePreviousSong={handlePreviousSong}
+                                    setProgress={setProgress}
                                 />
                             </Box>
                         </Box>
