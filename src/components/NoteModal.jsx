@@ -1,8 +1,8 @@
-import { Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, Text, useMediaQuery } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
+/* eslint-disable react/prop-types */
+
+import { Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, Text } from '@chakra-ui/react';
 
 const NoteModal = ({ isOpen, onClose, name, text }) => {
-    const [isSmallerThan465px] = useMediaQuery("(max-width: 575px)");
 
     return (
         <Modal isOpen={isOpen} onClose={onClose} isCentered>
