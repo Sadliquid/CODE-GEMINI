@@ -32,7 +32,7 @@ function MainCard() {
             songName: "Magical Connection",
             songArtist: "Peak Twilight and Prithvi",
             audioSrc: "src/assets/audio/MagicalConnection.mp3",
-            audioCover: "src/assets/MagicalConnection.png"
+            audioCover: "src/assets/audioCovers/MagicalConnection.png"
         },
         {
             songName: "Common Ground",
