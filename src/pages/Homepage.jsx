@@ -21,7 +21,7 @@ function Homepage() {
 					left={0}
 					width="100%"
 					height="100%"
-					bgImage="url('src/assets/lofiFirstFrame.jpg')"
+					bgImage="url('src/assets/misc/lofiFirstFrame.png')"
 					bgSize="cover"
 					bgPosition="center"
 					zIndex={-2}
@@ -44,7 +44,7 @@ function Homepage() {
 							transition: 'opacity 1s ease-in-out', // Smooth fade-in transition
 						}}
 					>
-						<source src="src/assets/lofiBackground.mp4" type="video/mp4" />
+						<source src="src/assets/misc/lofiBackground.mp4" type="video/mp4" />
 					</video>
 				</Box>
 				<Box

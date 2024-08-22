@@ -13,10 +13,7 @@ function ImagesSection() {
     const toast = useToast();
 
     const images = [
-        "src/assets/Ocean.png",
-        "src/assets/Night.png",
-        "src/assets/CozyWood.png",
-        "src/assets/Photo_1.png"
+        "src/assets/images/Photo_1.png"
     ];
 
     const handleScrollLeft = () => {

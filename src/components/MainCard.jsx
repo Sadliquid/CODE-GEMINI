@@ -20,49 +20,49 @@ function MainCard() {
             songName: "Smoke and Chill",
             songArtist: "Gaming Sensei",
             audioSrc: "src/assets/audio/SmokeNChill.mp3",
-            audioCover: "src/assets/audioCovers/PeakTwilight.png"
+            audioCover: "src/assets/audioCovers/SmokeNChill.png"
         },
         {
             songName: "Oakscreen",
             songArtist: "Soiboi and Peak Twilight",
             audioSrc: "src/assets/audio/Oakscreen.mp3",
-            audioCover: "src/assets/audioCovers/PeakTwilight.png"
+            audioCover: "src/assets/audioCovers/Oakscreen.png"
         },
         {
             songName: "Magical Connection",
             songArtist: "Peak Twilight and Prithvi",
             audioSrc: "src/assets/audio/MagicalConnection.mp3",
-            audioCover: "src/assets/CozyWood.png"
+            audioCover: "src/assets/MagicalConnection.png"
         },
         {
             songName: "Common Ground",
             songArtist: "Peak Twilight",
             audioSrc: "src/assets/audio/CommonGround.mp3",
-            audioCover: "src/assets/audioCovers/PeakTwilight.png"
+            audioCover: "src/assets/audioCovers/CommonGround.png"
         },
         {
             songName: "Tourist",
             songArtist: "Rj Pasin",
             audioSrc: "src/assets/audio/Tourist.mp3",
-            audioCover: "src/assets/audioCovers/PeakTwilight.png"
+            audioCover: "src/assets/audioCovers/Tourist.png"
         },
         {
             songName: "Departure",
             songArtist: "Peak Twilight & S N U G",
             audioSrc: "src/assets/audio/Departure.mp3",
-            audioCover: "src/assets/audioCovers/PeakTwilight.png"
+            audioCover: "src/assets/audioCovers/Departure.png"
         },
         {
             songName: "Desolation",
             songArtist: "Peak Twilight & mell-ø",
             audioSrc: "src/assets/audio/Desolation.mp3",
-            audioCover: "src/assets/audioCovers/PeakTwilight.png"
+            audioCover: "src/assets/audioCovers/Desolation.png"
         },
         {
             songName: "Lunar Shores",
             songArtist: "Peak Twilight & no one's perfect",
             audioSrc: "src/assets/audio/LunarShores.mp3",
-            audioCover: "src/assets/audioCovers/PeakTwilight.png"
+            audioCover: "src/assets/audioCovers/LunarShores.png"
         }
     ];
 
