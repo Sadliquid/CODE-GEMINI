@@ -3,7 +3,7 @@
 
 import { Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, Text, Box, Image } from '@chakra-ui/react';
 
-const NoteModal = ({ isOpen, onClose, name, text, image, video }) => {
+const NoteModal = ({ isOpen, onClose, name, text, images, videos }) => {
 
     return (
         <Modal isOpen={isOpen} onClose={onClose} isCentered>
@@ -54,26 +54,37 @@ const NoteModal = ({ isOpen, onClose, name, text, image, video }) => {
                             ~{" " + name}
                         </Text>
                     </Box>
-                    {image !== "none" && (
-                        <Image 
-                            src={image}
-                            alt="Image"
-                            borderRadius="md"
-                            mt={5}
-                            maxW="400px"
-                            objectFit={"cover"}
-                        />
-                    )}
-                    {video !== "none" && (
-                        <Box mt={5} frameBorder={0} maxW="400px" objectFit={"cover"}>
-                            <iframe
-                                src={video}
-                                title="Video"
-                                width="100%"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
+                    {Array.isArray(images) && images.length > 0 && (
+                        images.map((image) => (
+                            <Image 
+                                key={image}
+                                src={image}
+                                alt="Image"
+                                borderRadius="md"
+                                mt={5}
+                                maxW="400px"
+                                objectFit="cover"
                             />
-                        </Box>
+                        ))
+                    )}
+                    {Array.isArray(videos) && videos.length > 0 && (
+                        videos.map((video) => (
+                            <Box
+                                key={video}
+                                mt={5}
+                                textAlign="center"
+                                maxW="100%"
+                            >
+                                <video
+                                    controls
+                                    width="100%"
+                                    style={{ maxWidth: "400px", objectFit: "cover" }}
+                                >
+                                    <source src={video} />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </Box>
+                        ))
                     )}
                 </ModalBody>
             </ModalContent>

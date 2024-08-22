@@ -1,27 +1,163 @@
 {
     "Qi Fang": {
         "message": "Heyyy What's up prakhar, Nooooo ur leaving earlier and not ending the year 2 together with us ._. No more best class rep around to help us answer teacher queries 🫢🫢\n\n Thank you for being the most awesome class rep always helping to convey message around despite being so busy at times. It was great to work with you for Ecoms 1,definitely had fun in the process and filming for TicTap video 💯\n\n All the best for your adventures up ahead !",
-        "image": "none",
-        "video": "none"
+        "images": [],
+        "videos": []
     },
-    "Person_1": {
-        "message": "Hey Prakhar, I'm so glad to have met you this year! You're such a kind and helpful person, and I'm so grateful for all the help you've given me. I'm going to miss you so much next year, but I know you're going to do amazing things in the future. I hope we can stay in touch, and I wish you all the best in everything you do. Take care, and don't forget to visit us in the future!",
-        "image": "none",
-        "video": "none"
+    "KS": {
+        "message": "dear prakhar,\n\n my favourite indian. you know i never thought i’d like indian people so much until i met you. all jokes aside, you’re seriously one of the most talented people i’ve ever seen, not on some glazing shit but i don’t think i will see anyone that good at pure coding ever again. u probably already have enough people glazing you for your accolades, how you’re a dsta scholar before coming into nyp blah blah blah. but something i think people underrate about you is who u are as a person. despite you being a fucking nerd, your sense of humour really is a breath of fresh air being in a block full of npcs, i will always cherish the moments where we bond over alcohol and over how problematic indian people are (i still hate indian people, and no im not racist i hate everyone equally 🤭🤭🤭). then again i hope you have a lot of fun there in Korea as you’re fucking living my dream, go try out the good food, go see the nice scenery, go talk to the hot girls there, u feel me? honestly just thanks for everything you have done for me, i wouldn’t have made it so far in nyp without you and i hope after you come back from Korea we can meet up for drinks. thank you for everything!\n\n with love,",
+        "images": [],
+        "videos": []
     },
-    "Person_2": {
-        "message": "Hey Prakhar, I'm so glad to have met you this year! You're such a kind and helpful person, and I'm so grateful for all the help you've given me. I'm going to miss you so much next year, but I know you're going to do amazing things in the future. I hope we can stay in touch, and I wish you all the best in everything you do. Take care, and don't forget to visit us in the future!",
-        "image": "none",
-        "video": "none"
+    "Ching Yi": {
+        "message": "hey prakhar it’s been great knowing you and i’m grateful for all the good times we’ve shared! as you head off to your osep i want to wish you all the best and make the best memories over there ☺️  safe travels and see you soon!",
+        "images": [
+            "src/assets/images/Photo_1.png"
+        ],
+        "videos": []
     },
-    "Person_3": {
-        "message": "Hey Prakhar, I'm so glad to have met you this year! You're such a kind and helpful person, and I'm so grateful for all the help you've given me. I'm going to miss you so much next year, but I know you're going to do amazing things in the future. I hope we can stay in touch, and I wish you all the best in everything you do. Take care, and don't forget to visit us in the future!",
-        "image": "none",
-        "video": "none"
+    "Your SIT Club Boss (Agathiyan)": {
+        "message": "Hey Prakhar, just wanted to say that hope you have a safe trip to South Korea and enjoy this wonderful experience. Hope you make more friends and discover more about the world, people and yourself.\n\n In Brainrot language, I just hope you such a Kai cenat level Gyatt with skibidi rizz of the toilet tax of fanum\n\n Well with this I will be ending of this Poem and hope you enjoy reading it😁\n\n Skibidi Fanum,",
+        "images": [
+            "src/assets/images/Photo_2.png"
+        ],
+        "videos": []
     },
-    "Person_4": {
-        "message": "Hey Prakhar, I'm so glad to have met you this year! You're such a kind and helpful person, and I'm so grateful for all the help you've given me. I'm going to miss you so much next year, but I know you're going to do amazing things in the future. I hope we can stay in touch, and I wish you all the best in everything you do. Take care, and don't forget to visit us in the future!",
-        "image": "none",
-        "video": "none"
+    "Hui Xin": {
+        "message": "hii prakhar 👋🏻 heard that u will b leaving to korea soon. it's such a bummer that we didn't get to interact much over the past 1½ years 🥲🫠 but still, thank u for everything! u bring lots of joy to the class & im grateful to b in the same class as u 😙✨ wishing u all the best on ur new adventure 🏞 hope u will enjoy & have a blast during ur time there! 🔥 take care & see u when i see u HAHHAHA 😗",
+        "images": [],
+        "videos": []
+    },
+    "Shannon": {
+        "message": "hey prakhar! or should i say annyeonghaseyo now🤣👋🏻 all the best while you’re at korea and enjoy while you’re there! go experience the cheap soju there hahaha…. stay safe and healthy! see you when you’re back",
+        "images": [
+            "src/assets/images/Photo_3.png",
+            "src/assets/images/Photo_4.png"
+        ],
+        "videos": []
+    },
+    "guess who i am": {
+        "message": "Prakhar being Prakhar, one of the 'most complaining' friend. PLEASE come back soon and enjoy the rest of your year 3 with us! Hope you enjoy your stay there!",
+        "images": [
+            "src/assets/images/Photo_5.png"
+        ],
+        "videos": []
+    },
+    "Yi Sian": {
+        "message": "Thanks for all the entertaining moments ever since secondary school! dont forget us over at 4R4 and we cant wait to hear about your Korea experience when you are back\n\n this pic is the first time i worked with Prakhar to develop a real-world prototype app, together with Ved (his very best friend) from 2021-2022",
+        "images": [
+            "src/assets/images/Photo_6.png",
+            "src/assets/images/Photo_7.png"
+        ],
+        "videos": []
+    },
+    "Harold": {
+        "message": "Thank you for making our 1.5 years in IT2301 a memorable one. All the best in your future endeavours and have fun in your Korea trip (we shall meet again in the future)",
+        "images": [],
+        "videos": []
+    },
+    "Nithia": {
+        "message": "Hey PRAKHAR TRIVEDI, remember our first conversation when you asked me why I chose IT and I said 'for fun'? And you were like, 'wow, a major life decision for fun.' Well, now I kinda regret my choice 😕😕 But yeah, it’s been one and a half years of knowing you, and it’s really been wonderful. Thanks for all the laughs and support😁😁 But yeah ... DON’T STRESS TOO MUCH, AND THE CLUBBING CULTURE IN KOREA IS INSANE—TRY IT! Really gonna miss you. Have fun, take care, and let’s stay in touch! REMEMBER WE STILL HAVE A ONE ON ONE BOWLING MATCH 🤣🤣",
+        "images": [],
+        "videos": []
+    },
+    "Moira": {
+        "message": "heyy prakhar\n\n okay tbh i dun rly know what to say since we don’t rly talk much but all the best for next sem!! thanks for being like a rly great class lead and for hosting all the class outings…legit i mean it those were rly fun.\n\n stay sane and stay cool\nand also—\n\n SMILE BRUTHA >:] ✨✨",
+        "images": [],
+        "videos": [
+            "src/assets/videos/ClassChalet.mp4",
+            "src/assets/videos/yesTeacherPrakhar.mp4"
+        ]
+    },
+    "Kaushik": {
+        "message": "Hey Prakhar!\n\n It's been a year and a half with you!\n\n Though we haven't had many opportunities to have a conversation, you're a cool guy!\n\n I appreciate all that you've done for the class!\n\n I hope you do well in your future endeavours!\n\n PS: Don't wanna sound annoying but as peer support, or just as a good acquaintance, talk to us if your facing any issues!",
+        "images": [],
+        "videos": []
+    },
+    "Rachel": {
+        "message": "annyeonghaseyo 🤣💀 I’m glad that we are friends because you are genuinely a really really AMAZING person HAHA. Have FUN at Korea & be careful out there. I know you’re worried about being there alone but dw, you have Zavic and the rest 🙏🙏. Whenever you’re feeling down or homesick, just call back home (gwenchana ding ding ding 🫰) CAN’T WAIT FOR ALL THE GOOD MEMORIES THERE + see you when I see you 🫡🫡. annyeong!",
+        "images": [],
+        "videos": []
+    },
+    "Michelle": {
+        "message": "HIIIIII PRAKHARRRR!!! NAURRR why are you going off to korea im literally so sad, you have been such an awesome friend and classmate!! Thankyou for always being there to help me when im struggling with my code and thankyou for being like a steady pillar for the class to lean on coz we can literally count on you for everything (you are like the class rep we never had oops)!! Im gna miss your little stares and comments at me when im being weird LOL but also gna miss YOUR weird silly moments. I truly wish you all the best in Korea and I hope you make many many many friends and eat delicious food and get the best grades. also You better come back looking like a Korean oppa bro hehe okie yea anyways... gahmsahamida... gwenchana.... and annyeong(goodbye)...",
+        "images": [],
+        "videos": [
+            "src/assets/videos/prakharscaredofbug.MOV"
+        ]
+    },
+    "Megan": {
+        "message": "hellos and atb in korea☺☺its nice working w u from last year😆😆 hope to see u ard in sch next time if possible✋🏻✋🏻 SAFE FLIGHTS and goodbye🕺🏻🎶💃🏼",
+        "images": [],
+        "videos": []
+    },
+    "Saranghae Medric Mida": {
+        "message": "ur not gonna die and its not like the last time im gonna see u fker so im not gonna make it cheesy, have fun in korea and dont miss sg too much and when u do come back im gonna beat yo ah and have a meal.",
+        "images": [],
+        "videos": []
+    },
+    "ITS FINEEEEEEEEEEEEE (Lincoln)": {
+        "message": "Wuish Prakhar! It's hard to believe that next semester, we won't have you around in class while you're off enjoying life in the kimchi kingdom, But it's not a goodbye forever!\n\n I just wanted to say a huge thank you for everything you've done for the class. Whether it was as our class rep or group leader, you really brought so much energy and fun to our time together.\n\n I'm really sad I won't be able to join in the final farewell before you head to Korea, but I promise I'll be there to welcome you back like a champion returning from the Olympics! ✨\n\n Have a safe flight, make tons of new friends over there, and most importantly, stay safe! Just, you know, don't get too wild and end up jumping into the sea after a few too many drinks, haha! 🫡\n\n Take care, and see you soon! Anneong! 🇰🇷",
+        "images": [],
+        "videos": []
+    },
+    "Nicholas": {
+        "message": "Hey Prakhar! It's only been 1 and a half years since I met you and I can tell that you are one of the smartest person I have met. You never stop caring about the group members as well as the class and also never stop sharing your knowledge bank with us. I hope that you have a safe flight to Korea and that you enjoy yourself there. Don't miss Singapore too much and most importantly don't forget to stay healthy and not do stupid things over there.\n\n I won't be there to welcome you back but when I get to see you again I will be there no matter what!",
+        "images": [],
+        "videos": []
+    },
+    "allergic to PRs (Joshua)": {
+        "message": "YOOO whassup Prakhar! time sure flies, doesn't it? feels like we just met and you're already leaving for Korea?! das crazyyyy brooo 🤯 \n\n HUGEEE thank you for all you've done for us, planning of class events, managing the dissemination of info from our dear lecturers, leading us (without u we'd be like the minions in the scene where they were just wandering around searching for their boss 😆 ), and most importantly looking out for us! i'll def miss the good ol' times we hustled thru tgt, camping in library north wing or goin on a trip around singapore gathering ppl's opinions HAHA\n\n god, time around here never gonna be the same without u here with us bro. hope you're excited for the TONS of fun waiting for u in Korea! remb to take rly rly rly gud care of urself, and enjoy ur time there! take this chance to relax, have a gud time, explore, (and touch some grass pls, oh and LOTS of snow during the winter season!), u deserve it aft working literally 400% overtime the past 1.5 years\n\n oh and don't forget, we'll ALWAYS be here for u! call us regularly cos...well i mean we'll be missing u LOTS, duh?! have a safe flight and an AMAZING trip!! i'll be there to welcome u back on the day u arrive back in SG, so cya then!",
+        "images": [
+            "src/assets/images/Photo_12.png"
+        ],
+        "videos": []
+    },
+    "Justin": {
+        "message": "Yo Prakhar, I know we dont talk much to each other but the times we had together was fun. I had a ton of fun playing against you in badminton FFL. I rarely get to play against good badminton players like you (but we both know that Im still better). Welp, I wish you all the best for your future endeavours and good luck finding vegetarian food in korea.",
+        "images": [],
+        "videos": []
+    },
+    "ur fav ai pres (Wen Bing)": {
+        "message": "HIII PRAKHAR,\n\n enjoy ur time in korea!! thanks for all the hardwork into nyp ai yea. and uh ill miss ur yapping 😀 and dont forget to buy me food when u come back !!",
+        "images": [],
+        "videos": []
+    },
+    "Brosnan": {
+        "message": "dear prakhar, thanks for the past 6 years! it's been great! i'll never forget how you approached me on the first day of school and how we instantly became friends, who would've known it would've led to where we are today! thanks for always putting up with my nonsense and for being there. i know that you've been working hard in poly, and that you have big dreams. never give up, keep working hard, and i know that you'll reap the seeds you sow! have fun in korea! stay safe, learn new things, meet new people, and of course drink your favourite soju u alcoholic😂😂pls dont get wasted on the streets LOOL come back in one piece ya🤣🤣all the best for your exchange and send lots of pics!",
+        "images": [
+            "src/assets/images/Photo_8.png",
+            "src/assets/images/Photo_9.png",
+            "src/assets/images/Photo_10.png",
+            "src/assets/images/Photo_11.png"
+        ],
+        "videos": []
+    },
+    "Qian Peng": {
+        "message": "Dear Prakhar,\n\n While I haven’t really talked to you that much I would say that it has been nice to meet you throughout especially during the orientation period. You definitely seem chill and I like that you have passion in coding since I have seen different codes of yours. You have been a inspiration to the team I was in during FSDP to work further on our code and I appreciate when your team supports our team before presentation. All the best!",
+        "images": [],
+        "videos": []
+    },
+    "Ms Jasmine": {
+        "message": "Enjoy yourself and have lots of fun in the exchange programme! Look forward to your fun stories when you are back!",
+        "images": [],
+        "videos": []
+    },
+    "Jing Da": {
+        "message": "Goodbye Prakhar, all the best to you and hope that you will have fun in Korea. Keep striving in your studies, and try to keep away from hard liquor ah HAHAHHA 😏😏",
+        "images": [],
+        "videos": []
+    },
+    "Junni Jun Hammy <3": {
+        "message": "Hey brodah!! (this is gna be the longest note ur gonna be reading but…NONE OF THESE ARE CHATGPT OKAY >:0)\n\n Yk, people ask us why we are doing an ENTIRE WEBSITE of well wishes for u even though ur gonna be back in a semester. I too question myself. But as I look back at the times we’ve spent grinding our asses off, I think that u really do deserve more than what I can give. Yk after u come back, people are gonna start their internships, their acad / FYP, and people are gonna start going their separate ways. And then I realise, dayum, my MVP aint gonna be here with me to end the 2nd year in a blast…\n\n The morning texts of “SHIT I WOKE UP LATE, HELP ME TELL CHER”; the “Help me vet, if I don’t get 4.0 its on u”; the “⁠general NOW”; the spicy lunch topics that stayed at the same food central table during our 2 hr breaks; the “lets go for this event, it seems interesting!!”; the “4.0 BY THE WAY” also HAHAHA; and lets not forget, the 12 hours of grinding in Idea Space 1, 5 days a week. The blood sweat tears and joyful moments, good’ol days aint it… if only we cld relive the semester!! (obvs NOT MAKANMATCH WAS HELL…)\n\n Yeah but, couldn’t have reached where I am today without u!!! U’ve done SO MUCH for me, this is the least I can do… Im sure u will have fun in Korea, yk study there, meet new people, enjoy the opposite of the weather in Singapore, be the only odd one out (iykyk HAHAHA), but that being said, highs don’t come without lows. Yeah it aint gonna be easy, especially when all u eat is trees (sorry kinda funny HAHHAHA) and staying in an unfamiliar environment for a few months. But mate, I know u’d pull through! Well even if u don’t, ur brodahs got ur back, we r js one “#CITY HALL NOW” away <3\n\n Wishing u all the best in Korea! Drinks on me when ur back brodahhh!!\n\n Heres a little poem just for u:\n Through late mornings and grinds we've shared,\n Laughter and tears, we were always prepared.\n From spicy chats to endless nights,\n In every struggle, we found our heights.\n As you journey far to lands anew,\n Remember, your brodah’s here for you.\n Though trees might be your daily fare,\n You’ll thrive and grow, just anywhere.\n So here's to you, as you take this flight,\n We'll hold it down, till you reunite.\n In every text, in every cheer,\n Know that we’re just a call from near.\n Wishing you the best, no matter where,\n And when you’re back, drinks in the air!\n\n Signing off, ur one and only",
+        "images": [],
+        "videos": []
+    },
+    "Jyoshna": {
+        "message": "Here's a little something i've made for u!",
+        "images": [],
+        "videos": [
+            "src/assets/videos/JyoshnaVid.mp4"
+        ]
     }
 }

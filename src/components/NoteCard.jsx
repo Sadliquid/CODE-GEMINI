@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import { Box, Text } from '@chakra-ui/react';
 import NoteModal from './NoteModal';
 
-const NoteCard = ({ name, text, image, video }) => {
+const NoteCard = ({ name, text, images, videos }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     // Memoize randomDegree to prevent re-calculating on every render
@@ -89,8 +89,8 @@ const NoteCard = ({ name, text, image, video }) => {
                 onClose={handleClose} 
                 name={name} 
                 text={text}
-                image={image}
-                video={video}
+                images={images}
+                videos={videos}
             />
         </>
     );

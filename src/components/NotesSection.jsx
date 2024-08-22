@@ -42,7 +42,7 @@ function NotesSection() {
         >
             {Object.keys(ClassNotes).map((person) => (
                 <Box key={person} width={cardWidth}>
-                    <NoteCard name={person} text={ClassNotes[person]["message"]} image={ClassNotes[person]["image"]} video={ClassNotes[person]["video"]} />
+                    <NoteCard name={person} text={ClassNotes[person]["message"]} images={ClassNotes[person]["images"]} videos={ClassNotes[person]["videos"]} />
                 </Box>
             ))}
         </Box>

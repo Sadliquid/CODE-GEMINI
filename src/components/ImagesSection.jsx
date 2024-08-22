@@ -13,7 +13,33 @@ function ImagesSection() {
     const toast = useToast();
 
     const images = [
-        "src/assets/images/Photo_1.png"
+        "src/assets/images/Photo_1.png",
+        "src/assets/images/Photo_2.png",
+        "src/assets/images/Photo_3.png",
+        "src/assets/images/Photo_4.png",
+        "src/assets/images/Photo_5.png",
+        "src/assets/images/Photo_6.png",
+        "src/assets/images/Photo_7.png",
+        "src/assets/images/Photo_8.png",
+        "src/assets/images/Photo_9.png",
+        "src/assets/images/Photo_10.png",
+        "src/assets/images/Photo_11.png",
+        "src/assets/images/Photo_12.png",
+        "src/assets/images/Photo_13.png",
+        "src/assets/images/Photo_14.png",
+        "src/assets/images/Photo_15.png",
+        "src/assets/images/Photo_16.png",
+        "src/assets/images/Photo_17.png",
+        "src/assets/images/Photo_18.png",
+        "src/assets/images/Photo_19.png",
+        "src/assets/images/Photo_20.png",
+        "src/assets/images/Photo_21.png",
+        "src/assets/images/Photo_22.png",
+        "src/assets/images/Photo_23.png",
+        "src/assets/images/Photo_24.png",
+        "src/assets/images/Photo_25.png",
+        "src/assets/images/Photo_26.png",
+        "src/assets/images/Photo_27.png"
     ];
 
     const handleScrollLeft = () => {
