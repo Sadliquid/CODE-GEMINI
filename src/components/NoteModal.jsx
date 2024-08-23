@@ -9,23 +9,24 @@ const NoteModal = ({ isOpen, onClose, name, text, images, videos, isTopFour }) =
 
     return (
         <Modal isOpen={isOpen} onClose={onClose} isCentered>
-            <ModalOverlay bg="rgba(0, 0, 0, 0.5)"/>
+            <ModalOverlay bg="rgba(0, 0, 0, 0.7)"/>
             <ModalContent
-                backgroundColor={isTopFour ? "rgba(255, 255, 255, 0.9)" : "yellow.100"}
+                className='modal-wrapper'
+                backgroundColor={isTopFour ? "rgba(255, 255, 255, 0.6)" : "yellow.100"}
                 borderWidth={isTopFour ? "5px" : ""}
                 borderColor={isTopFour ? "yellow.100" : ""}
-                borderRadius="md"
+                borderRadius="xl"
                 boxShadow="lg"
                 width="70%"
                 height="70%"
                 overflowY="auto"
+                overflowX="hidden"
                 sx={{
                     '&::-webkit-scrollbar': {
                         width: '8px',
                     },
                     '&::-webkit-scrollbar-track': {
-                        background: '#f1f1f1',
-                        borderRadius: '0px 24px 24px 0px',
+                        background: '#f1f1f1'
                     },
                     '&::-webkit-scrollbar-thumb': {
                         background: '#888',
@@ -40,7 +41,7 @@ const NoteModal = ({ isOpen, onClose, name, text, images, videos, isTopFour }) =
             >
                 <ModalCloseButton/>
                 <ModalBody p={5} display="flex" flexDir="column" mt={3}>
-                    <Box>
+                    <Box className="modal">
                         <Text
                             fontFamily="'Patrick Hand', sans-serif"
                             fontSize="md"
@@ -90,6 +91,28 @@ const NoteModal = ({ isOpen, onClose, name, text, images, videos, isTopFour }) =
                             </Box>
                         ))
                     )}
+                    <Box>
+                        <span className="dot dot-1"></span>
+                        <span className="dot dot-2"></span>
+                        <span className="dot dot-3"></span>
+                        <span className="dot dot-4"></span>
+                        <span className="dot dot-5"></span>
+                        <span className="dot dot-6"></span>
+                        <span className="dot dot-7"></span>
+                        <span className="dot dot-8"></span>
+                        <span className="dot dot-9"></span>
+                        <span className="dot dot-10"></span>
+                        <span className="dot dot-11"></span>
+                        <span className="dot dot-12"></span>
+                        <span className="dot dot-13"></span>
+                        <span className="dot dot-14"></span>
+                        <span className="dot dot-15"></span>
+                        <span className="dot dot-16"></span>
+                        <span className="dot dot-17"></span>
+                        <span className="dot dot-18"></span>
+                        <span className="dot dot-19"></span>
+                        <span className="dot dot-20"></span>
+                    </Box>
                 </ModalBody>
             </ModalContent>
         </Modal>

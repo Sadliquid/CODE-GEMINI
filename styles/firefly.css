@@ -77,7 +77,7 @@
     --starting-x: 30px;
     --starting-y: 20px;
     top: 5px;
-    left: 10px;  /* Randomized left position */
+    left: 10px; /* Randomized left position */
     opacity: 0.7;
 }
 
@@ -98,8 +98,8 @@
     --size: 4px;
     --starting-x: -10px;
     --starting-y: 20px;
-    top: 30px; 
-    left: 5px;  /* Randomized left position */
+    top: 30px;
+    left: 5px; /* Randomized left position */
 }
 
 .dot-4 {
@@ -119,7 +119,7 @@
     --size: 5px;
     --starting-x: -40px;
     --starting-y: -20px;
-    bottom: 15px;  /* Randomized bottom position */
+    bottom: 15px; /* Randomized bottom position */
     right: 10px; /* Randomized right position */
 }
 
@@ -129,7 +129,7 @@
     --size: 4px;
     --starting-x: 12px;
     --starting-y: -18px;
-    bottom: 25px;  /* Randomized bottom position */
+    bottom: 25px; /* Randomized bottom position */
     left: 30px;
     opacity: 0.7;
 }
@@ -150,7 +150,7 @@
     --size: 5px;
     --starting-x: 20px;
     --starting-y: 10px;
-    top: 55px;  /* Randomized top position */
+    top: 55px; /* Randomized top position */
     left: 25px; /* Randomized left position */
     opacity: 0.7;
 }
@@ -161,7 +161,7 @@
     --size: 6px;
     --starting-x: -20px;
     --starting-y: 10px;
-    bottom: 35px; 
+    bottom: 35px;
     left: 5px; /* Randomized left position */
 }
 
@@ -181,7 +181,7 @@
     --size: 4px;
     --starting-x: 20px;
     --starting-y: 10px;
-    top: 80px;  /* Randomized top position */
+    top: 80px; /* Randomized top position */
     left: 35px; /* Randomized left position */
     opacity: 0.7;
 }
@@ -202,7 +202,7 @@
     --size: 6px;
     --starting-x: -10px;
     --starting-y: 20px;
-    top: 120px;  /* Randomized top position */
+    top: 120px; /* Randomized top position */
     left: 20px; /* Randomized left position */
 }
 
@@ -222,7 +222,7 @@
     --size: 4px;
     --starting-x: -20px;
     --starting-y: 10px;
-    top: 95px;  /* Randomized top position */
+    top: 95px; /* Randomized top position */
     right: 5px; /* Randomized right position */
 }
 
@@ -242,7 +242,7 @@
     --size: 6px;
     --starting-x: 20px;
     --starting-y: 10px;
-    top: 150px;  /* Randomized top position */
+    top: 150px; /* Randomized top position */
     right: 50px; /* Randomized right position */
 }
 
@@ -262,7 +262,7 @@
     --size: 4px;
     --starting-x: -10px;
     --starting-y: 20px;
-    top: 110px;  /* Randomized top position */
+    top: 110px; /* Randomized top position */
     right: 35px; /* Randomized right position */
 }
 
@@ -337,4 +337,61 @@
     100% {
         transform: translate(0, 0);
     }
+}
+
+.modal-wrapper {
+    position: relative;
+    z-index: 1050; /* Ensure this is above the dots */
+}
+.modal {
+    overflow: hidden;
+    width: 100%;
+    border-radius: "md 0 0 md";
+}
+/* Styling for the button's glowing effect on hover */
+.modal::before {
+    content: "";
+    box-shadow: 0px 0px 24px 0px #ffeb3b;
+    mix-blend-mode: screen;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: "md 0 0 md";
+    opacity: 0;
+}
+/* Additional glowing effect for the button */
+.modal::after {
+    content: "";
+    box-shadow: 0px 0px 23px 0px #fdfca9 inset, 0px 0px 8px 0px #ffffff42;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: "md 0 0 md";
+    opacity: 0;
+}
+.modal::before,
+.modal::after {
+    opacity: 1;
+}
+
+.dot {
+    transform: translate(0, 0) rotate(var(--rotatation));
+    z-index: 1;
+}
+
+.dot::after {
+    animation-play-state: running;
+}
+
+.chakra-modal__close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1100; /* Higher z-index to make sure it's on top */
 }
