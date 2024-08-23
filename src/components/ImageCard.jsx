@@ -7,7 +7,6 @@ function ImageCard({ src }) {
         <Card
             bg="white"
             p={0}
-            borderRadius="md 0 0 md"
             boxShadow="md"
             w="full"
             h="full"

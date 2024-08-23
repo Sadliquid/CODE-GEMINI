@@ -3,6 +3,8 @@
 import { useState, useMemo } from 'react';
 import { Box, Text } from '@chakra-ui/react';
 import NoteModal from './NoteModal';
+import "../../styles/firefly.css";
+import "../../scripts/firefly.jsx";
 
 const NoteCard = ({ name, text, images, videos }) => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -21,7 +23,7 @@ const NoteCard = ({ name, text, images, videos }) => {
     // Define styles outside of render
     const cardStyle = {
         display: 'flex',
-        bg: 'yellow.100',
+        bg: 'yellow.75',
         p: 4,
         borderRadius: 'md',
         boxShadow: 'lg',
@@ -46,46 +48,55 @@ const NoteCard = ({ name, text, images, videos }) => {
         top: '-10px',
         left: '50%',
         transform: 'translateX(-50%)',
-        width: '20px',
-        height: '20px',
-        bg: 'cyan',
+        width: '0px',
+        height: '0px',
+        bg: 'none',
         borderRadius: '50%',
-        boxShadow: 'md',
     };
 
     return (
         <>
-            <Box
-                sx={{
-                    ...cardStyle,
-                    _hover: hoverStyle,
-                    _before: beforeStyle,
-                }}
-                onClick={handleClick}
-            >
-                <Text
-                    fontFamily="'Patrick Hand', sans-serif"
-                    fontSize="md"
-                    color="gray.800"
-                    overflow="hidden"
-                    textOverflow="ellipsis"
-                    whiteSpace="normal"
-                    wordBreak="break-word"
-                    noOfLines={5}
+            <Box className="button-wrapper">
+                <span className="dot dot-1"></span>
+                <span className="dot dot-2"></span>
+                <span className="dot dot-3"></span>
+                <span className="dot dot-4"></span>
+                <span className="dot dot-5"></span>
+                <span className="dot dot-6"></span>
+                <span className="dot dot-7"></span>
+                <Box
+                    className="button"
+                    sx={{
+                        ...cardStyle,
+                        _hover: hoverStyle,
+                        _before: beforeStyle,
+                    }}
+                    onClick={handleClick}
                 >
-                    {text}
-                </Text>
-                <Text
-                    alignSelf="flex-start"
-                    fontStyle="italic"
-                    mt="auto"
-                    whiteSpace="nowrap"
-                    overflow="hidden"
-                    textOverflow="ellipsis"
-                    maxWidth="100%"
-                >
-                    ~ {name}
-                </Text>
+                    <Text
+                        fontFamily="'Patrick Hand', sans-serif"
+                        fontSize="md"
+                        color="gray.800"
+                        overflow="hidden"
+                        textOverflow="ellipsis"
+                        whiteSpace="normal"
+                        wordBreak="break-word"
+                        noOfLines={5}
+                    >
+                        {text}
+                    </Text>
+                    <Text
+                        alignSelf="flex-start"
+                        fontStyle="italic"
+                        mt="auto"
+                        whiteSpace="nowrap"
+                        overflow="hidden"
+                        textOverflow="ellipsis"
+                        maxWidth="100%"
+                    >
+                        ~ {name}
+                    </Text>
+                </Box>
             </Box>
 
             <NoteModal 
