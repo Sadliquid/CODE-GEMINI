@@ -76,80 +76,237 @@
     --size: 6px;
     --starting-x: 30px;
     --starting-y: 20px;
-    top: 2px;
-    left: -16px;
+    top: 5px;
+    left: 10px;  /* Randomized left position */
     opacity: 0.7;
 }
+
 .dot-2 {
     --rotatation: 122deg;
     --speed: 16s;
     --size: 3px;
     --starting-x: 40px;
     --starting-y: 10px;
-    top: 1px;
-    left: 0px;
+    top: 15px;
+    right: 15px; /* Randomized right position */
     opacity: 0.7;
 }
+
 .dot-3 {
     --rotatation: 39deg;
     --speed: 20s;
     --size: 4px;
     --starting-x: -10px;
     --starting-y: 20px;
-    top: -8px;
-    right: 14px;
+    top: 30px; 
+    left: 5px;  /* Randomized left position */
 }
+
 .dot-4 {
     --rotatation: 220deg;
     --speed: 18s;
     --size: 2px;
     --starting-x: -30px;
     --starting-y: -5px;
-    bottom: 4px;
-    right: -14px;
+    top: 40px;
+    right: 20px; /* Randomized right position */
     opacity: 0.9;
 }
+
 .dot-5 {
     --rotatation: 190deg;
     --speed: 22s;
     --size: 5px;
     --starting-x: -40px;
     --starting-y: -20px;
-    bottom: -6px;
-    right: -3px;
+    bottom: 15px;  /* Randomized bottom position */
+    right: 10px; /* Randomized right position */
 }
+
 .dot-6 {
     --rotatation: 20deg;
     --speed: 15s;
     --size: 4px;
     --starting-x: 12px;
     --starting-y: -18px;
-    bottom: -12px;
+    bottom: 25px;  /* Randomized bottom position */
     left: 30px;
     opacity: 0.7;
 }
+
 .dot-7 {
     --rotatation: 300deg;
     --speed: 19s;
     --size: 3px;
     --starting-x: 6px;
     --starting-y: -20px;
-    bottom: -16px;
-    left: 44px;
+    bottom: 10px; /* Randomized bottom position */
+    right: 30px; /* Randomized right position */
 }
+
+.dot-8 {
+    --rotatation: 90deg;
+    --speed: 17s;
+    --size: 5px;
+    --starting-x: 20px;
+    --starting-y: 10px;
+    top: 55px;  /* Randomized top position */
+    left: 25px; /* Randomized left position */
+    opacity: 0.7;
+}
+
+.dot-9 {
+    --rotatation: 180deg;
+    --speed: 21s;
+    --size: 6px;
+    --starting-x: -20px;
+    --starting-y: 10px;
+    bottom: 35px; 
+    left: 5px; /* Randomized left position */
+}
+
+.dot-10 {
+    --rotatation: 270deg;
+    --speed: 23s;
+    --size: 3px;
+    --starting-x: -10px;
+    --starting-y: 20px;
+    bottom: 5px; /* Randomized bottom position */
+    right: 5px; /* Randomized right position */
+}
+
+.dot-11 {
+    --rotatation: 120deg;
+    --speed: 15s;
+    --size: 4px;
+    --starting-x: 20px;
+    --starting-y: 10px;
+    top: 80px;  /* Randomized top position */
+    left: 35px; /* Randomized left position */
+    opacity: 0.7;
+}
+
+.dot-12 {
+    --rotatation: 240deg;
+    --speed: 17s;
+    --size: 5px;
+    --starting-x: -20px;
+    --starting-y: 10px;
+    bottom: 45px; /* Randomized bottom position */
+    right: 40px; /* Randomized right position */
+}
+
+.dot-13 {
+    --rotatation: 60deg;
+    --speed: 19s;
+    --size: 6px;
+    --starting-x: -10px;
+    --starting-y: 20px;
+    top: 120px;  /* Randomized top position */
+    left: 20px; /* Randomized left position */
+}
+
+.dot-14 {
+    --rotatation: 150deg;
+    --speed: 21s;
+    --size: 3px;
+    --starting-x: 20px;
+    --starting-y: 10px;
+    bottom: 70px; /* Randomized bottom position */
+    right: 20px; /* Randomized right position */
+}
+
+.dot-15 {
+    --rotatation: 330deg;
+    --speed: 23s;
+    --size: 4px;
+    --starting-x: -20px;
+    --starting-y: 10px;
+    top: 95px;  /* Randomized top position */
+    right: 5px; /* Randomized right position */
+}
+
+.dot-16 {
+    --rotatation: 210deg;
+    --speed: 15s;
+    --size: 5px;
+    --starting-x: -10px;
+    --starting-y: 20px;
+    bottom: 50px; /* Randomized bottom position */
+    left: 5px; /* Randomized left position */
+}
+
+.dot-17 {
+    --rotatation: 30deg;
+    --speed: 17s;
+    --size: 6px;
+    --starting-x: 20px;
+    --starting-y: 10px;
+    top: 150px;  /* Randomized top position */
+    right: 50px; /* Randomized right position */
+}
+
+.dot-18 {
+    --rotatation: 270deg;
+    --speed: 19s;
+    --size: 3px;
+    --starting-x: -20px;
+    --starting-y: 10px;
+    bottom: 20px; /* Randomized bottom position */
+    left: 20px; /* Randomized left position */
+}
+
+.dot-19 {
+    --rotatation: 90deg;
+    --speed: 21s;
+    --size: 4px;
+    --starting-x: -10px;
+    --starting-y: 20px;
+    top: 110px;  /* Randomized top position */
+    right: 35px; /* Randomized right position */
+}
+
+.dot-20 {
+    --rotatation: 180deg;
+    --speed: 23s;
+    --size: 5px;
+    --starting-x: 20px;
+    --starting-y: 10px;
+    bottom: 60px; /* Randomized bottom position */
+    left: 15px; /* Randomized left position */
+}
+
 /* Keyframe animations */
 @keyframes dimFirefly {
     0% {
         opacity: 1;
     }
-    25% {
+    8% {
         opacity: 0.4;
     }
-    50% {
+    22% {
         opacity: 0.8;
     }
-    75% {
+    28% {
         opacity: 0.5;
+    }
+    42% {
+        opacity: 1;
+    }
+    48% {
+        opacity: 0.6;
+    }
+    62% {
+        opacity: 0.9;
+    }
+    68% {
+        opacity: 0.7;
+    }
+    82% {
+        opacity: 0.5;
+    }
+    88% {
+        opacity: 0.8;
     }
     100% {
         opacity: 1;

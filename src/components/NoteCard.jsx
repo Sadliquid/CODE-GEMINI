@@ -98,46 +98,6 @@ const NoteCard = ({ name, text, images, videos, isTopFour }) => {
                             <span className="dot dot-18"></span>
                             <span className="dot dot-19"></span>
                             <span className="dot dot-20"></span>
-                            <span className="dot dot-21"></span>
-                            <span className="dot dot-22"></span>
-                            <span className="dot dot-23"></span>
-                            <span className="dot dot-24"></span>
-                            <span className="dot dot-25"></span>
-                            <span className="dot dot-26"></span>
-                            <span className="dot dot-27"></span>
-                            <span className="dot dot-28"></span>
-                            <span className="dot dot-29"></span>
-                            <span className="dot dot-30"></span>
-                            <span className="dot dot-1"></span>
-                            <span className="dot dot-2"></span>
-                            <span className="dot dot-3"></span>
-                            <span className="dot dot-4"></span>
-                            <span className="dot dot-5"></span>
-                            <span className="dot dot-6"></span>
-                            <span className="dot dot-7"></span>
-                            <span className="dot dot-8"></span>
-                            <span className="dot dot-9"></span>
-                            <span className="dot dot-10"></span>
-                            <span className="dot dot-11"></span>
-                            <span className="dot dot-12"></span>
-                            <span className="dot dot-13"></span>
-                            <span className="dot dot-14"></span>
-                            <span className="dot dot-15"></span>
-                            <span className="dot dot-16"></span>
-                            <span className="dot dot-17"></span>
-                            <span className="dot dot-18"></span>
-                            <span className="dot dot-19"></span>
-                            <span className="dot dot-20"></span>
-                            <span className="dot dot-21"></span>
-                            <span className="dot dot-22"></span>
-                            <span className="dot dot-23"></span>
-                            <span className="dot dot-24"></span>
-                            <span className="dot dot-25"></span>
-                            <span className="dot dot-26"></span>
-                            <span className="dot dot-27"></span>
-                            <span className="dot dot-28"></span>
-                            <span className="dot dot-29"></span>
-                            <span className="dot dot-30"></span>
                         </Box>
                     )}
                 <Box
