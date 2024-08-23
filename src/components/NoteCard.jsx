@@ -6,7 +6,7 @@ import NoteModal from './NoteModal';
 import "../../styles/firefly.css";
 import "../../scripts/firefly.jsx";
 
-const NoteCard = ({ name, text, images, videos }) => {
+const NoteCard = ({ name, text, images, videos, isTopFour }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     // Memoize randomDegree to prevent re-calculating on every render
@@ -23,7 +23,7 @@ const NoteCard = ({ name, text, images, videos }) => {
     // Define styles outside of render
     const cardStyle = {
         display: 'flex',
-        bg: 'yellow.75',
+        // bg: 'yellow.75',
         p: 4,
         borderRadius: 'md',
         boxShadow: 'lg',
@@ -56,14 +56,90 @@ const NoteCard = ({ name, text, images, videos }) => {
 
     return (
         <>
-            <Box className="button-wrapper">
-                <span className="dot dot-1"></span>
-                <span className="dot dot-2"></span>
-                <span className="dot dot-3"></span>
-                <span className="dot dot-4"></span>
-                <span className="dot dot-5"></span>
-                <span className="dot dot-6"></span>
-                <span className="dot dot-7"></span>
+            <Box 
+                className={isTopFour ? "button-wrapper" : ""}
+                mt={5}
+                sx={{
+                    position: 'relative',
+                    _before: {
+                        content: `""`,
+                        position: 'absolute',
+                        top: '-10px',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        width: '20px',
+                        height: '20px',
+                        bg: isTopFour ? "#F7D87C" : "cyan",
+                        borderRadius: '50%',
+                        boxShadow: 'md',
+                        zIndex: '100',
+                    }
+                }}
+            >
+                {isTopFour && (
+                        <Box>
+                            <span className="dot dot-1"></span>
+                            <span className="dot dot-2"></span>
+                            <span className="dot dot-3"></span>
+                            <span className="dot dot-4"></span>
+                            <span className="dot dot-5"></span>
+                            <span className="dot dot-6"></span>
+                            <span className="dot dot-7"></span>
+                            <span className="dot dot-8"></span>
+                            <span className="dot dot-9"></span>
+                            <span className="dot dot-10"></span>
+                            <span className="dot dot-11"></span>
+                            <span className="dot dot-12"></span>
+                            <span className="dot dot-13"></span>
+                            <span className="dot dot-14"></span>
+                            <span className="dot dot-15"></span>
+                            <span className="dot dot-16"></span>
+                            <span className="dot dot-17"></span>
+                            <span className="dot dot-18"></span>
+                            <span className="dot dot-19"></span>
+                            <span className="dot dot-20"></span>
+                            <span className="dot dot-21"></span>
+                            <span className="dot dot-22"></span>
+                            <span className="dot dot-23"></span>
+                            <span className="dot dot-24"></span>
+                            <span className="dot dot-25"></span>
+                            <span className="dot dot-26"></span>
+                            <span className="dot dot-27"></span>
+                            <span className="dot dot-28"></span>
+                            <span className="dot dot-29"></span>
+                            <span className="dot dot-30"></span>
+                            <span className="dot dot-1"></span>
+                            <span className="dot dot-2"></span>
+                            <span className="dot dot-3"></span>
+                            <span className="dot dot-4"></span>
+                            <span className="dot dot-5"></span>
+                            <span className="dot dot-6"></span>
+                            <span className="dot dot-7"></span>
+                            <span className="dot dot-8"></span>
+                            <span className="dot dot-9"></span>
+                            <span className="dot dot-10"></span>
+                            <span className="dot dot-11"></span>
+                            <span className="dot dot-12"></span>
+                            <span className="dot dot-13"></span>
+                            <span className="dot dot-14"></span>
+                            <span className="dot dot-15"></span>
+                            <span className="dot dot-16"></span>
+                            <span className="dot dot-17"></span>
+                            <span className="dot dot-18"></span>
+                            <span className="dot dot-19"></span>
+                            <span className="dot dot-20"></span>
+                            <span className="dot dot-21"></span>
+                            <span className="dot dot-22"></span>
+                            <span className="dot dot-23"></span>
+                            <span className="dot dot-24"></span>
+                            <span className="dot dot-25"></span>
+                            <span className="dot dot-26"></span>
+                            <span className="dot dot-27"></span>
+                            <span className="dot dot-28"></span>
+                            <span className="dot dot-29"></span>
+                            <span className="dot dot-30"></span>
+                        </Box>
+                    )}
                 <Box
                     className="button"
                     sx={{
@@ -71,12 +147,14 @@ const NoteCard = ({ name, text, images, videos }) => {
                         _hover: hoverStyle,
                         _before: beforeStyle,
                     }}
+                    backgroundColor={isTopFour ? "rgba(255, 255, 255, 0.4)" : "yellow.100"}
                     onClick={handleClick}
+                    borderWidth={isTopFour ? "1.5px" : ""}
+                    borderColor={isTopFour ? "yellow.100" : ""}
                 >
                     <Text
                         fontFamily="'Patrick Hand', sans-serif"
                         fontSize="md"
-                        color="gray.800"
                         overflow="hidden"
                         textOverflow="ellipsis"
                         whiteSpace="normal"
@@ -106,6 +184,7 @@ const NoteCard = ({ name, text, images, videos }) => {
                 text={text}
                 images={images}
                 videos={videos}
+                isTopFour={isTopFour}
             />
         </>
     );

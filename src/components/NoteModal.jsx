@@ -2,14 +2,19 @@
 /* eslint-disable react/prop-types */
 
 import { Modal, ModalOverlay, ModalContent, ModalCloseButton, ModalBody, Text, Box, Image } from '@chakra-ui/react';
+import "../../styles/firefly.css";
+import "../../scripts/firefly.jsx";
 
-const NoteModal = ({ isOpen, onClose, name, text, images, videos }) => {
+const NoteModal = ({ isOpen, onClose, name, text, images, videos, isTopFour }) => {
 
     return (
         <Modal isOpen={isOpen} onClose={onClose} isCentered>
             <ModalOverlay bg="rgba(0, 0, 0, 0.5)"/>
             <ModalContent
-                bg="yellow.100"
+                // bg="yellow.100"
+                backgroundColor={isTopFour ? "rgba(255, 255, 255, 0.9)" : "yellow.100"}
+                borderWidth={isTopFour ? "5px" : ""}
+                borderColor={isTopFour ? "yellow.100" : ""}
                 borderRadius="md"
                 boxShadow="lg"
                 width="70%"
