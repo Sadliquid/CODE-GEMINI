@@ -41,7 +41,7 @@ function Homepage() {
 							objectFit: 'cover',
 							zIndex: -2,
 							opacity: videoLoaded ? 1 : 0,
-							transition: 'opacity 1s ease-in-out', // Smooth fade-in transition
+							transition: 'opacity 1s ease-in-out',
 						}}
 					>
 						<source src="/assets/misc/lofiBackground.mp4" type="video/mp4" />

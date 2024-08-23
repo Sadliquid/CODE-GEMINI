@@ -1,12 +1,13 @@
 import Kinet from "kinet";
+
 var kinet = new Kinet({
     acceleration: 0.02,
     friction: 0.25,
     names: ["x", "y"],
 });
-// select circle element
+
 var circle = document.getElementById("circle");
-// set handler on kinet tick event
+
 kinet.on("tick", function (instances) {
     circle.style.transform = `translate3d(${instances.x.current}px, ${
         instances.y.current
@@ -14,9 +15,11 @@ kinet.on("tick", function (instances) {
         instances.y.velocity / 2
     }deg)`;
 });
+
 kinet.on("start", function () {
     console.log("start");
 });
+
 kinet.on("end", function () {
     console.log("end");
 });
