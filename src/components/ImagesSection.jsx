@@ -39,7 +39,11 @@ function ImagesSection() {
         "src/assets/images/Photo_24.png",
         "src/assets/images/Photo_25.png",
         "src/assets/images/Photo_26.png",
-        "src/assets/images/Photo_27.png"
+        "src/assets/images/Photo_27.png",
+        "src/assets/images/Photo_28.png",
+        "src/assets/images/Photo_29.png",
+        "src/assets/images/Photo_30.png",
+        "src/assets/images/Photo_31.png"
     ];
 
     const handleScrollLeft = () => {
