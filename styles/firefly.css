@@ -348,37 +348,6 @@
     width: 100%;
     border-radius: "md 0 0 md";
 }
-/* Styling for the button's glowing effect on hover */
-.modal::before {
-    content: "";
-    box-shadow: 0px 0px 24px 0px #ffeb3b;
-    mix-blend-mode: screen;
-    transition: opacity 0.3s;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    border-radius: "md 0 0 md";
-    opacity: 0;
-}
-/* Additional glowing effect for the button */
-.modal::after {
-    content: "";
-    box-shadow: 0px 0px 23px 0px #fdfca9 inset, 0px 0px 8px 0px #ffffff42;
-    transition: opacity 0.3s;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    border-radius: "md 0 0 md";
-    opacity: 0;
-}
-.modal::before,
-.modal::after {
-    opacity: 1;
-}
 
 .dot {
     transform: translate(0, 0) rotate(var(--rotatation));
@@ -393,5 +362,5 @@
     position: absolute;
     top: 15px;
     right: 15px;
-    z-index: 1100; /* Higher z-index to make sure it's on top */
+    z-index: 1100;
 }
