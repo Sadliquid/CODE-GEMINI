@@ -79,6 +79,10 @@ const NoteCard = ({ name, text, images, videos }) => {
                     alignSelf="flex-start"
                     fontStyle="italic"
                     mt="auto"
+                    whiteSpace="nowrap"
+                    overflow="hidden"
+                    textOverflow="ellipsis"
+                    maxWidth="100%"
                 >
                     ~ {name}
                 </Text>
