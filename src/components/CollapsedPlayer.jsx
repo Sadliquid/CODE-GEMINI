@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
+
 import { Card, Image, Text, Box, HStack, useMediaQuery } from "@chakra-ui/react";
 import { FaPlay, FaPause, FaForward, FaBackward } from "react-icons/fa";
 import { motion } from "framer-motion";
